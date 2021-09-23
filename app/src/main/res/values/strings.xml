@@ -8,4 +8,6 @@
     <string name="TotalSalesText">Total Sales</string>
     <string name="manageProductsBtn">Manage Products</string>
     <string name="pharmacyNameTxt">Pharmacy</string>
+    <string name="manageProductstxt">Manage Products</string>
+    <string name="pharmacyDashboardtxt">Dashboard</string>
 </resources>

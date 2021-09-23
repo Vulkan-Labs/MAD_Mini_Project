@@ -32,8 +32,10 @@
         android:id="@+id/pharmacyPictureView"
         android:layout_width="103dp"
         android:layout_height="105dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/pharmacyNameText"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pharmacyNameText"
         app:layout_constraintTop_toTopOf="@+id/pharmacyNameText"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -90,14 +92,25 @@
         app:layout_constraintStart_toEndOf="@+id/totalProductOrdersText" />
 
     <Button
-        android:id="@+id/manageProductsBtn"
+        android:id="@+id/manageProductsBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
         android:text="@string/manageProductsBtn"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/totalSalesForDayText"
         app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="@+id/totalOrdersForDayText"
-        app:layout_constraintTop_toBottomOf="@+id/totalSalesForDayText"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintTop_toBottomOf="@+id/totalSalesForDayText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/pharmacyDashboardtxt"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
