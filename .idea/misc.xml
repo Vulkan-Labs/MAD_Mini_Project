@@ -7,12 +7,12 @@
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_edit_product.xml" value="0.259375" />
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_main.xml" value="0.17889492753623187" />
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_manage_products.xml" value="0.259375" />
-        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_pharmacy_main.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_pharmacy_main.xml" value="0.2" />
         <entry key="..\:/Users/tivai/AndroidStudioProjects/MAD_Mini_Project_Team_Vulkan/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="15" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="15" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

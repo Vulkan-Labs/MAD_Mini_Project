@@ -7,12 +7,12 @@
     tools:context=".editProduct">
 
     <TextView
-        android:id="@+id/addNewProductTXT4"
+        android:id="@+id/editewProductTXT4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="120dp"
-        android:text="@string/addNewProducttxt"
+        android:text="@string/editProducttxt"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,8 +29,8 @@
         android:text="@string/productQuantityIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/addNewProductTXT4"
-        app:layout_constraintTop_toBottomOf="@+id/addNewProductTXT4" />
+        app:layout_constraintStart_toStartOf="@+id/editewProductTXT4"
+        app:layout_constraintTop_toBottomOf="@+id/editewProductTXT4" />
 
     <EditText
         android:id="@+id/productPriceInput4"

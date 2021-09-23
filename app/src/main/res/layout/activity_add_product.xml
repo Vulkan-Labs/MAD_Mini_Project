@@ -12,13 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="120dp"
-        android:text="@string/editProducttxt"
+        android:text="@string/addNewProducttxt"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editProductNameInput"
+        android:id="@+id/ADDProductNameInput"
         android:layout_width="338dp"
         android:layout_height="47dp"
         android:layout_marginTop="44dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/addNewProductTXT" />
 
     <EditText
-        android:id="@+id/editProductPriceInput"
+        android:id="@+id/ADDProductPriceInput"
         android:layout_width="338dp"
         android:layout_height="47dp"
         android:layout_marginTop="30dp"
@@ -42,11 +42,11 @@
         android:text="@string/productPriceIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editProductNameInput"
-        app:layout_constraintTop_toBottomOf="@+id/editProductNameInput" />
+        app:layout_constraintStart_toStartOf="@+id/ADDProductNameInput"
+        app:layout_constraintTop_toBottomOf="@+id/ADDProductNameInput" />
 
     <EditText
-        android:id="@+id/editProductQuantityInput"
+        android:id="@+id/ADDProductQuantityInput"
         android:layout_width="338dp"
         android:layout_height="47dp"
         android:layout_marginTop="30dp"
@@ -56,8 +56,8 @@
         android:text="@string/productQuantityIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editProductPriceInput"
-        app:layout_constraintTop_toBottomOf="@+id/editProductPriceInput" />
+        app:layout_constraintStart_toStartOf="@+id/ADDProductPriceInput"
+        app:layout_constraintTop_toBottomOf="@+id/ADDProductPriceInput" />
 
     <Button
         android:id="@+id/addProductSaveButton"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:text="@string/addProductSavebtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editProductQuantityInput"
-        app:layout_constraintTop_toBottomOf="@+id/editProductQuantityInput"
+        app:layout_constraintStart_toStartOf="@+id/ADDProductQuantityInput"
+        app:layout_constraintTop_toBottomOf="@+id/ADDProductQuantityInput"
         app:layout_constraintVertical_bias="0.179" />
 </androidx.constraintlayout.widget.ConstraintLayout>
