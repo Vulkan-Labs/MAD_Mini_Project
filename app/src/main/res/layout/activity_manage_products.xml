@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="50dp"
         android:text="@string/manageProductstxt"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,17 +25,20 @@
         android:id="@+id/addNewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="@string/addNewBtntxt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.074" />
 
-    <ListView
-        android:id="@+id/manageProductList"
-        android:layout_width="409dp"
-        android:layout_height="486dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listProductRecyclerView"
+        android:layout_width="410dp"
+        android:layout_height="434dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addNewButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

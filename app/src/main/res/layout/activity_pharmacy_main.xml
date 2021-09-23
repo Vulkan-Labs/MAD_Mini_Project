@@ -7,18 +7,6 @@
     tools:context=".pharmacyMain">
 
     <TextView
-        android:id="@+id/totalOrdersForDayText"
-        android:layout_width="75dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="185dp"
-        android:text="@string/totalOrdersForDay"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/pharmacyNameText"
         android:layout_width="79dp"
         android:layout_height="0dp"
@@ -43,7 +31,7 @@
         android:id="@+id/totalOrdersText"
         android:layout_width="75dp"
         android:layout_height="78dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="272dp"
         android:text="@string/totalOrders"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,14 +40,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/totalSalesText"
-        android:layout_width="72dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="148dp"
-        android:text="@string/totalSales"
-        android:textSize="34sp"
-        app:layout_constraintStart_toEndOf="@+id/totalOrdersText"
-        app:layout_constraintTop_toTopOf="@+id/totalOrdersText" />
+        android:id="@+id/totalSalesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/TotalSalesText"
+        app:layout_constraintBottom_toTopOf="@+id/totalSalesText"
+        app:layout_constraintStart_toEndOf="@+id/totalProductOrdersText" />
 
     <TextView
         android:id="@+id/totalSalesForDayText"
@@ -72,24 +60,36 @@
         app:layout_constraintTop_toTopOf="@+id/totalOrdersForDayText" />
 
     <TextView
+        android:id="@+id/totalOrdersForDayText"
+        android:layout_width="75dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="220dp"
+        android:text="@string/totalOrdersForDay"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/totalProductOrdersText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/totalProdctOrdersText"
         app:layout_constraintBottom_toTopOf="@+id/totalOrdersText"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/totalSalesTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/TotalSalesText"
-        app:layout_constraintBottom_toTopOf="@+id/totalSalesText"
-        app:layout_constraintStart_toEndOf="@+id/totalProductOrdersText" />
+        android:id="@+id/totalSalesText"
+        android:layout_width="72dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="148dp"
+        android:text="@string/totalSales"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/totalOrdersText"
+        app:layout_constraintTop_toTopOf="@+id/totalOrdersText" />
 
     <Button
         android:id="@+id/manageProductsBTN"
@@ -107,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="50dp"
         android:text="@string/pharmacyDashboardtxt"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"

@@ -12,10 +12,13 @@
     <string name="pharmacyDashboardtxt">Dashboard</string>
     <string name="addNewBtntxt">ADD New Product</string>
     <string name="addNewProducttxt">ADD New Product</string>
-    <string name="productNameIn">" "</string>
-    <string name="productPriceIn">" "</string>
-    <string name="productQuantityIn">" "</string>
+    <string name="productNameIn"></string>
+    <string name="productPriceIn"></string>
+    <string name="productQuantityIn"></string>
     <string name="editProducttxt">Edit Product</string>
     <string name="addProductSavebtn">Save</string>
     <string name="editProductSavebtn">Save</string>
+    <string name="addProducthint">Product Name</string>
+    <string name="addProductPricehint">Price</string>
+    <string name="addProductQuantityhint">Quantity</string>
 </resources>

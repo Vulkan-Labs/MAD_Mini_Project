@@ -1,7 +1,10 @@
 package com.mad.miniproject_teamvulkan;
 
-public class Product {
+import com.google.firebase.database.Exclude;
 
+public class Product {
+    @Exclude
+    private String key;
     private String productName;
     private float price;
     private int quantity;
@@ -36,4 +39,13 @@ public class Product {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
 }
