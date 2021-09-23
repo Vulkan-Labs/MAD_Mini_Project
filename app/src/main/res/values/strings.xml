@@ -10,4 +10,10 @@
     <string name="pharmacyNameTxt">Pharmacy</string>
     <string name="manageProductstxt">Manage Products</string>
     <string name="pharmacyDashboardtxt">Dashboard</string>
+    <string name="addNewBtntxt">ADD New Product</string>
+    <string name="addNewProducttxt">ADD New Product</string>
+    <string name="productNameIn">" "</string>
+    <string name="productPriceIn">" "</string>
+    <string name="productQuantityIn">" "</string>
+    <string name="editProducttxt">Edit Product</string>
 </resources>

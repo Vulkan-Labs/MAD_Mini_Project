@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan">
         <activity
+            android:name=".editProduct"
+            android:exported="true" />
+        <activity
+            android:name=".addProduct"
+            android:exported="true" />
+        <activity
             android:name=".manageProducts"
             android:exported="true" />
         <activity
