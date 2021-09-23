@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mad.miniproject_teamvulkan">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan">
         <activity
-            android:name=".ProductView"
+            android:name=".productView"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

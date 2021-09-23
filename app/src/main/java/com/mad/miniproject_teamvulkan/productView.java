@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ProductView extends AppCompatActivity {
+public class productView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
