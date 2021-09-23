@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MAD_Mini_Project - Team_Vulkan</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_sign_up">SIGN UP</string>
 </resources>
