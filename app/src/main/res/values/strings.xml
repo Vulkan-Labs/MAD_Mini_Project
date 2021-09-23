@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MAD_Mini_Project - Team_Vulkan</string>
+    <string name="totalOrders">0</string>
+    <string name="totalSales">0</string>
+    <string name="totalOrdersForDay">0</string>
+    <string name="totalSalesForDay">0</string>
+    <string name="totalProdctOrdersText">Total Product Orders</string>
+    <string name="TotalSalesText">Total Sales</string>
+    <string name="manageProductsBtn">Manage Products</string>
+    <string name="pharmacyNameTxt">Pharmacy</string>
 </resources>
