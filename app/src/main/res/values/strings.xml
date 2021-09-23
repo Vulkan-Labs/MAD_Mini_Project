@@ -16,4 +16,6 @@
     <string name="productPriceIn">" "</string>
     <string name="productQuantityIn">" "</string>
     <string name="editProducttxt">Edit Product</string>
+    <string name="addProductSavebtn">Save</string>
+    <string name="editProductSavebtn">Save</string>
 </resources>
