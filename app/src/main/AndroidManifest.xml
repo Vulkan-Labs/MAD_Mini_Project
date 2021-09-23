@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan">
         <activity
+            android:name=".Review_view"
+            android:exported="true" />
+        <activity
             android:name=".productView"
             android:exported="true" />
         <activity
@@ -23,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
