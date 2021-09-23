@@ -8,9 +8,11 @@
 
     <Button
         android:id="@+id/btn_login2"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="@color/dark_blue"
         android:text="@string/btn_login"
         android:textSize="20sp"
@@ -21,22 +23,24 @@
 
     <TextView
         android:id="@+id/txt_login"
-        android:layout_width="145dp"
-        android:layout_height="47dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/btn_login"
         android:textColor="@color/dark_blue"
-        android:textSize="34sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/input_username"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:hint="@string/inputBox_email"
         android:inputType="textEmailAddress"
@@ -48,9 +52,11 @@
 
     <EditText
         android:id="@+id/input_password"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:hint="@string/inputBox_password"
         android:inputType="textPassword"
@@ -67,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/txt_forgot_pw"
         android:textColor="@color/medium_blue"
         app:layout_constraintEnd_toEndOf="parent"
