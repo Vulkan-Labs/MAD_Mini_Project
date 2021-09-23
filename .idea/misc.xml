@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_product_view.xml" value="0.47104247104247104" />
-        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_review_view.xml" value="0.72" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_review_view.xml" value="0.4" />
         <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/product_cards.xml" value="0.536" />
         <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/product_list.xml" value="0.264" />
         <entry key="..\:/Users/tivai/AndroidStudioProjects/MAD_Mini_Project_Team_Vulkan/app/src/main/res/layout/activity_main.xml" value="0.33" />

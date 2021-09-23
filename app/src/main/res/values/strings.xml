@@ -3,4 +3,5 @@
     <string name="entry">Enter</string>
     <string name="all_text">All Products</string>
     <string name="review_text">Review Product</string>
+    <string name="submit_btn">Submit</string>
 </resources>
