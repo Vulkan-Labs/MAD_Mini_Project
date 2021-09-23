@@ -24,4 +24,5 @@
     <string name="inputBox_category_id">Category ID</string>
     <string name="inputBox_category_description">Description</string>
     <string name="btn_done">DONE</string>
+    <string name="txt_edit_category">Edit Category</string>
 </resources>
