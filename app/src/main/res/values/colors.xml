@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- MediRx Theme Colors -->
+    <color name="light_blue">#A1D9DF</color>
+    <color name="medium_blue">#3FAAD7</color>
+    <color name="dark_blue">#0064AF</color>
+    <color name="red">#B00020</color>
+    <!-- Default Colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
