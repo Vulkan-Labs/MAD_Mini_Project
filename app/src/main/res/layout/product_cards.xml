@@ -29,9 +29,9 @@
 
             <TextView
                 android:id="@+id/product_name"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="oxymeter"
+
                 android:textStyle="normal"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
@@ -56,7 +56,7 @@
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Body Oxygon meter"
+
                 android:textStyle="normal"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
@@ -81,7 +81,7 @@
                 android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4000"
+
                 android:textStyle="normal"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>

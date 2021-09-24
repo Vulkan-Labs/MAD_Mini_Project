@@ -13,9 +13,8 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-
+    private static final String TAG = "test.sliit.recyclerview.RecyclerViewAdapter";
     Context context;
-
     ArrayList<products> list;
 
     public MyAdapter(Context context, ArrayList<products> list) {
@@ -26,16 +25,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.product_cards,parent,false);
-        return new MyViewHolder(v);
+        View view = LayoutInflater.from(context).inflate(R.layout.product_cards,parent,false);
+        return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        products product =  list.get(position);
-        holder.productname.setText(product.getProductname());
-        holder.description.setText(product.getQuantity());
-        holder.price.setText(product.getPrice());
+
+        products pro = list.get(position);
+        holder.name.setText(pro.getProductName());
+        holder.description.setText(pro.getQuantity());
+        holder.price.setText(pro.getPrice());
 
     }
 
@@ -44,17 +44,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return list.size();
     }
 
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView productname, description, price;
+        TextView name, description, price;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            productname = itemView.findViewById(R.id.product_name);
+            name = itemView.findViewById(R.id.product_name);
             description = itemView.findViewById(R.id.description);
             price = itemView.findViewById(R.id.price);
-
         }
     }
 

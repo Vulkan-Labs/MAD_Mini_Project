@@ -1,17 +1,17 @@
 package com.mad.miniproject_teamvulkan;
 
 public class products {
-    String productname, price, quantity;
+    String productName, quantity, price;
 
-    public String getProductname() {
-        return productname;
-    }
-
-    public String getPrice() {
-        return price;
+    public String getProductName() {
+        return productName;
     }
 
     public String getQuantity() {
         return quantity;
+    }
+
+    public String getPrice() {
+        return price;
     }
 }
