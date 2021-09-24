@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan">
         <activity
+            android:name=".product_description"
+            android:exported="true" />
+        <activity
+            android:name=".Main_cart"
+            android:exported="true" />
+        <activity
             android:name=".Review_view"
             android:exported="true" />
         <activity
