@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText email, password;
-    /*private TextView forgotPassword;*/
+    private TextView forgotPassword;
     private Button login_btn;
 
     private FirebaseAuth mAuth;
@@ -34,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.input_email);
         password = findViewById(R.id.input_password);
 
+        forgotPassword = findViewById(R.id.txt_forgot_password);
+
         login_btn = findViewById(R.id.btn_login2);
 
         mAuth = FirebaseAuth.getInstance();
@@ -42,6 +44,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loginUser();
+            }
+        });
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openResetPasswordActivity();
             }
         });
 
@@ -76,5 +85,10 @@ public class LoginActivity extends AppCompatActivity {
         }else{
             email.setError("Please enter a valid email address!");
         }
+    }
+
+    public void openResetPasswordActivity(){
+        Intent intent = new Intent(this, ResetPasswordActivity.class);
+        startActivity(intent);
     }
 }
