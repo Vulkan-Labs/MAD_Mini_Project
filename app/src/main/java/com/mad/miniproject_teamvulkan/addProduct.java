@@ -85,7 +85,7 @@ public class addProduct extends AppCompatActivity {
 
                        // txtMessage.setText(Integer.toString(nextID));
 
-                       txtMessage.setText(finalID);
+                       txtMessage.setText("PRODUCT ID " + finalID);
 
                        prd.setPROID(finalID);
 
@@ -93,7 +93,7 @@ public class addProduct extends AppCompatActivity {
 
                 }else{
 
-                    Toast.makeText(getApplicationContext(), "Database Empty Initilising ID ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Database Empty ID Initilised", Toast.LENGTH_SHORT).show();
 
                     String ID = "PR000000";
 
@@ -115,7 +115,7 @@ public class addProduct extends AppCompatActivity {
 
                     // txtMessage.setText(Integer.toString(nextID));
 
-                    txtMessage.setText(finalID);
+                    txtMessage.setText("PRODUCT ID " + finalID);
 
                     prd.setPROID(finalID);
 
