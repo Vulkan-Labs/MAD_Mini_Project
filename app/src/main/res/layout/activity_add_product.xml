@@ -21,7 +21,7 @@
         android:id="@+id/ADDProductNameInput"
         android:layout_width="338dp"
         android:layout_height="47dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="@string/addProducthint"
         android:inputType="textPersonName"
@@ -71,4 +71,16 @@
         app:layout_constraintStart_toStartOf="@+id/ADDProductQuantityInput"
         app:layout_constraintTop_toBottomOf="@+id/ADDProductQuantityInput"
         app:layout_constraintVertical_bias="0.179" />
+
+    <TextView
+        android:id="@+id/viewProductID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viewProductIDtxt"
+        app:layout_constraintBottom_toTopOf="@+id/ADDProductNameInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ADDProductNameInput"
+        app:layout_constraintTop_toBottomOf="@+id/addNewProductTXT"
+        app:layout_constraintVertical_bias="0.53" />
 </androidx.constraintlayout.widget.ConstraintLayout>

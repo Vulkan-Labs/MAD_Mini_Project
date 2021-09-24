@@ -34,6 +34,7 @@
         android:layout_marginTop="272dp"
         android:text="@string/totalOrders"
         android:textSize="34sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +64,7 @@
         android:id="@+id/totalOrdersForDayText"
         android:layout_width="75dp"
         android:layout_height="78dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="228dp"
         android:text="@string/totalOrdersForDay"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -112,11 +113,5 @@
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="197dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
