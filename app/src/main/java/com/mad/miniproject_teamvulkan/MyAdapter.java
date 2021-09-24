@@ -1,6 +1,7 @@
 package com.mad.miniproject_teamvulkan;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -25,11 +26,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View v = LayoutInflater.from(context).inflate(R.layout.product_cards,parent,false);
+        return new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        products product =  list.get(position);
+        holder.productname.setText(product.getProductname());
+        holder.description.setText(product.getQuantity());
+        holder.price.setText(product.getPrice());
 
     }
 
