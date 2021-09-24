@@ -26,4 +26,7 @@
     <string name="btn_done">DONE</string>
     <string name="txt_edit_category">Edit Category</string>
     <string name="txt_manage_categories">Manage Categories</string>
+    <string name="txt_reset_password">RESET PASSWORD</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="txt_reset_pw_info">Enter your email below to receive instructions to reset password.</string>>
 </resources>
