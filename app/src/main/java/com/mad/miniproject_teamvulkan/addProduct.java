@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,10 +18,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Queue;
 
 public class addProduct extends AppCompatActivity {
-    EditText  ADDProductNameInput, ADDProductPriceInput, ADDProductQuantityInput;
+    EditText ADDProductID,  ADDProductNameInput, ADDProductPriceInput, ADDProductQuantityInput;
     Button addProductSaveButton;
     DatabaseReference dbRef;
     Product prd;
@@ -51,14 +54,36 @@ public class addProduct extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
 
-                for (DataSnapshot childDataSnapshot : datasnapshot.getChildren()) {
-                    if (childDataSnapshot.child("proid").getValue() != null) {
-                        ArrayList<String> products = new ArrayList<>();
-                        for (DataSnapshot ing : childDataSnapshot.child("proid").getChildren()) {
-                            products.add(ing.child("proid").getValue(String.class));
+                if (datasnapshot.hasChildren()) {
+
+                    for(DataSnapshot ds: datasnapshot.getChildren()){
+
+                        String ID = ds.child("proid").getValue().toString();
+
+                        if(ID == null){
+
+                            ID = "PR000000";
+
                         }
-                        System.out.println("Gained data: " + products.toString());
+
+                   String IDnum =  ID.substring(2,8);
+
+
+
+
+                        TextView txtMessage = findViewById(R.id.viewProductID);
+
+                        txtMessage.setText(IDconvert);
+
+
+
+
                     }
+
+                }else{
+
+                    Toast.makeText(getApplicationContext(), "Error fetching ID ", Toast.LENGTH_SHORT).show();
+
                 }
 
             }
@@ -90,7 +115,7 @@ public class addProduct extends AppCompatActivity {
                         prd.setProductName(ADDProductNameInput.getText().toString().trim());
                         prd.setPrice(Float.parseFloat(ADDProductPriceInput.getText().toString().trim()));
                         prd.setQuantity(Integer.parseInt(ADDProductQuantityInput.getText().toString().trim()));
-
+                        //prd.setPROID("PR000001");
                       //  dbRef.child().setValue(prd);
                         dbRef.push().setValue(prd);
 
