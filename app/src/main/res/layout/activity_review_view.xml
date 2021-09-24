@@ -23,10 +23,11 @@
         <ImageButton
             android:id="@+id/cart_btn"
             android:layout_width="38dp"
+            android:layout_height="match_parent"
             android:layout_gravity="left"
             android:layout_marginLeft="370dp"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_cart" />
+            app:srcCompat="@drawable/ic_cart"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </LinearLayout>
 
     <TextView
@@ -34,7 +35,7 @@
         android:layout_width="120dp"
         android:layout_height="42dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:layout_weight="11"
         android:fontFamily="@font/aclonica"
         android:gravity="center"
@@ -43,26 +44,26 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/panel" />
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="232dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="240dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/rev_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rating"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/Review_pro_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="60dp"
         android:text="Oxygon Meter"
         android:textSize="22dp"
         android:textStyle="normal"
@@ -74,65 +75,55 @@
         android:id="@+id/comment_text"
         android:layout_width="363dp"
         android:layout_height="138dp"
-        android:layout_marginTop="19dp"
         android:layout_marginBottom="150dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="@string/comment_hint"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comment_text_input"
-        app:layout_constraintVertical_bias="0.279"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/comment_text_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="Comment"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
     <TextView
         android:id="@+id/rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
         android:text="Rate the product"
         app:layout_constraintBottom_toTopOf="@+id/ratingBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/submit_btn_rev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
-        android:shadowColor="#7A7676"
+        android:layout_marginTop="50dp"
+        android:shadowColor="#2E2D2D"
         android:text="@string/submit_btn"
+        app:cornerRadius="30px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/comment_text" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="175dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/rating"
+    <EditText
+        android:id="@+id/rev_name"
+        android:layout_width="364dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/comment_text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Review_pro_text"
-        app:layout_constraintVertical_bias="0.868"
-        app:srcCompat="@drawable/oximeter" />
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
