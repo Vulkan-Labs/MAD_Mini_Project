@@ -23,7 +23,8 @@ import java.util.ArrayList;
 import java.util.Queue;
 
 public class addProduct extends AppCompatActivity {
-    EditText ADDProductID,  ADDProductNameInput, ADDProductPriceInput, ADDProductQuantityInput;
+    EditText ADDProductNameInput, ADDProductPriceInput, ADDProductQuantityInput;
+    TextView viewProductID;
     Button addProductSaveButton;
     DatabaseReference dbRef;
     Product prd;
@@ -58,9 +59,9 @@ public class addProduct extends AppCompatActivity {
 
                     for(DataSnapshot ds: datasnapshot.getChildren()){
 
-                        String ID = ds.child("proid").getValue().toString();
+                   String ID = ds.child("proid").getValue().toString();
 
-                        if(ID == null){
+                        if(ID == ""){
 
                             ID = "PR000000";
 
@@ -68,21 +69,55 @@ public class addProduct extends AppCompatActivity {
 
                    String IDnum =  ID.substring(2,8);
 
+                   int IDconvert = Integer.valueOf(IDnum);
+                   int nextID = IDconvert + 1;
+
+                   String nextIDPrefix = "PR";
+
+                   String nextIDSuffix = ("000000" + nextID);
+
+                   String nextIDSuffixTrimmed = nextIDSuffix.substring(nextIDSuffix.length() - 6);
 
 
+                        String finalID = nextIDPrefix + nextIDSuffixTrimmed;
 
                         TextView txtMessage = findViewById(R.id.viewProductID);
 
-                        txtMessage.setText(IDconvert);
+                       // txtMessage.setText(Integer.toString(nextID));
 
+                       txtMessage.setText(finalID);
 
-
+                       prd.setPROID(finalID);
 
                     }
 
                 }else{
 
-                    Toast.makeText(getApplicationContext(), "Error fetching ID ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Database Empty Initilising ID ", Toast.LENGTH_SHORT).show();
+
+                    String ID = "PR000000";
+
+                    String IDnum =  ID.substring(2,8);
+
+                    int IDconvert = Integer.valueOf(IDnum);
+                    int nextID = IDconvert + 1;
+
+                    String nextIDPrefix = "PR";
+
+                    String nextIDSuffix = ("000000" + nextID);
+
+                    String nextIDSuffixTrimmed = nextIDSuffix.substring(nextIDSuffix.length() - 6);
+
+
+                    String finalID = nextIDPrefix + nextIDSuffixTrimmed;
+
+                    TextView txtMessage = findViewById(R.id.viewProductID);
+
+                    // txtMessage.setText(Integer.toString(nextID));
+
+                    txtMessage.setText(finalID);
+
+                    prd.setPROID(finalID);
 
                 }
 
@@ -115,6 +150,8 @@ public class addProduct extends AppCompatActivity {
                         prd.setProductName(ADDProductNameInput.getText().toString().trim());
                         prd.setPrice(Float.parseFloat(ADDProductPriceInput.getText().toString().trim()));
                         prd.setQuantity(Integer.parseInt(ADDProductQuantityInput.getText().toString().trim()));
+
+
                         //prd.setPROID("PR000001");
                       //  dbRef.child().setValue(prd);
                         dbRef.push().setValue(prd);
