@@ -7,4 +7,6 @@
     <string name="all_views">All Reviews</string>
     <string name="comment_hint">Add a Comment</string>
     <string name="name_hint">Add Your Name</string>
+    <string name="item_name">Name</string>
+    <string name="item_comment">Comment</string>
 </resources>

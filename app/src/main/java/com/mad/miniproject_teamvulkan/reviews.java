@@ -14,7 +14,6 @@ public class reviews {
 
     }
 
-
     public String getName() {
         return name;
     }
