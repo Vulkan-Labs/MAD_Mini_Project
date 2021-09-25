@@ -1,5 +1,7 @@
 package com.mad.miniproject_teamvulkan;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -51,6 +53,16 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.MyView
                 deleteCategory(category.getCategory_ID(), position);
             }
         });
+
+        holder.edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String category_id = category.getCategory_ID();
+                Intent editCategory = new Intent(context.getApplicationContext(),EditCategoryActivity.class);
+                editCategory.putExtra(EXTRA_MESSAGE,category_id);
+                context.startActivity(editCategory);
+            }
+        });
     }
 
     @Override
@@ -72,6 +84,8 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.MyView
             delete = itemView.findViewById(R.id.btn_delete_category_list);
         }
     }
+
+
 
     private void deleteCategory(String categoryID, final int position){
         FirebaseDatabase.getInstance().getReference()
