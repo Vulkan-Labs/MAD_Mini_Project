@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MAD_Mini_Project - Team_Vulkan</string>
+    <string name="app_name">MediRx</string>
     <string name="btn_login">LOGIN</string>
     <string name="btn_sign_up">SIGN UP</string>
     <string name="txt_forgot_pw">FORGOT PASSWORD</string>
@@ -28,5 +28,9 @@
     <string name="txt_manage_categories">Manage Categories</string>
     <string name="txt_reset_password">RESET PASSWORD</string>
     <string name="btn_reset_password">Reset Password</string>
-    <string name="txt_reset_pw_info">Enter your email below to receive instructions to reset password.</string>>
+    <string name="txt_reset_pw_info">Enter your email below to receive instructions to reset password.</string>
+    <string name="btn_edt_category">Edit</string>
+    <string name="btn_dlt_category">Delete</string>
+    <string name="txt_category_no_txtView">Category [No.]</string>
+    <string name="txt_category_desc_txtView">[Category Description]</string>>
 </resources>

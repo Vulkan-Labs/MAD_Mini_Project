@@ -3,6 +3,7 @@ package com.mad.miniproject_teamvulkan;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -86,7 +87,7 @@ public class AddCategoryActivity extends AppCompatActivity {
 
                     String next_CID_prefix = "CT";
                     String next_CID_suffix = "000" + next_CID;
-                    String next_CID_suffix_trimmed = next_CID_suffix.substring(next_CID_suffix.length() - 6);
+                    String next_CID_suffix_trimmed = next_CID_suffix.substring(next_CID_suffix.length() - 3);
                     String final_CID = next_CID_prefix + next_CID_suffix_trimmed;
 
                     txt_category_ID.setText(final_CID);
@@ -114,7 +115,9 @@ public class AddCategoryActivity extends AppCompatActivity {
                         dbRef.child(ctg.getCategory_ID()).setValue(ctg);
                         //toast message to user
                         Toast.makeText(getApplicationContext(), "Category Added Successfully", Toast.LENGTH_SHORT).show();
-                        clearControls();
+                        //clearControls();
+                        startActivity(new Intent(AddCategoryActivity.this, ManageCategoriesActivity.class));
+                        finish();
                     }
                 } catch (NumberFormatException e) {
                     Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT).show();
