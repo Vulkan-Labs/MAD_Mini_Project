@@ -91,6 +91,7 @@ public class pharmacyMain extends AppCompatActivity {
             public void onClick(View v) {
                 Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
                 startActivity(manProd);
+
             }
         });
 

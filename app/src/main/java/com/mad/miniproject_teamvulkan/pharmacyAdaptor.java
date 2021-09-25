@@ -64,10 +64,19 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
             @Override
             public void onClick(View v) {
                 String prdid = product.getPROID();
+
                 Intent editProd = new Intent(context.getApplicationContext(), editProduct.class);
                 editProd.putExtra(EXTRA_MESSAGE, prdid);
+             //   editProd.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+              //  editProd.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                ((manageProducts)context).finish();
                 context.startActivity(editProd);
+
+              //  this.finish();
+
             }
+
+
 
         });
 
@@ -125,15 +134,23 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
+                         //list.remove(position);
+                      //   notifyItemRemoved(position);
+                         //  notifyItemRangeChanged(position, list.size());
 
-                            list.remove(position);
-                         //   notifyItemRemoved(position);
-                          //  notifyItemRangeChanged(position, list.size());
+
 
                             Log.d("Delete Product", "Product has been deleted");
                             Toast.makeText(context,
                                     "product has been deleted",
                                     Toast.LENGTH_SHORT).show();
+
+                            Intent manProd = new Intent(context.getApplicationContext(), manageProducts.class);
+                            ((manageProducts)context).finish();
+                            context.startActivity(manProd);
+
+
+
                         } else {
                             Log.d("Delete Product", "Product couldn't be deleted");
                             Toast.makeText(context,

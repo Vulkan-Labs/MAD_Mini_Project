@@ -121,13 +121,9 @@ public class editProduct extends AppCompatActivity {
 
                             }
 
-
-
-
                             Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
+                            finish();
                             startActivity(manProd);
-
-
 
                         }
                     }

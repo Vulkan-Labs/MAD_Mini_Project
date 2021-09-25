@@ -172,7 +172,9 @@ public class addProduct extends AppCompatActivity {
                 }
 
                 Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
+                manProd.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(manProd);
+                finish();
 
             }
         });

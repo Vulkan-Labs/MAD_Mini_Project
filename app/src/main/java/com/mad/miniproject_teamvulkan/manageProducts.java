@@ -54,7 +54,8 @@ public class manageProducts extends AppCompatActivity {
                     products.add(product);
 
                 }
-                pharmacyAdaptor.notifyDataSetChanged();
+
+             pharmacyAdaptor.notifyDataSetChanged();
 
             }
 
@@ -70,7 +71,9 @@ public class manageProducts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent addProd = new Intent(getApplicationContext(), addProduct.class);
+                finish();
                 startActivity(addProd);
+
             }
         });
 
