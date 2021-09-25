@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -37,7 +38,7 @@ public class productView extends AppCompatActivity {
         setContentView(R.layout.activity_product_view);
 
         recyclerView = findViewById(R.id.userList);
-        dbref= FirebaseDatabase.getInstance().getReference().child("Product").child("");
+        dbref= FirebaseDatabase.getInstance().getReference().child("Product");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -51,7 +52,7 @@ public class productView extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
 
-                    products prod = snapshot.getValue(products.class);
+                    products prod = dataSnapshot.getValue(products.class); //need to figure out this
                     list.add(prod);
                 }
                 myAdapter.notifyDataSetChanged();
@@ -59,11 +60,10 @@ public class productView extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
-
+                Toast.makeText(getApplicationContext(),"database error",
+                        Toast.LENGTH_SHORT).show();
             }
         });
-
 
 
 

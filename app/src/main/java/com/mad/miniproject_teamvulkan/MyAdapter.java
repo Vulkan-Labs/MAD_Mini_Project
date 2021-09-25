@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private static final String TAG = "test.sliit.recyclerview.RecyclerViewAdapter";
+
     Context context;
     ArrayList<products> list;
 
@@ -34,8 +34,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         products pro = list.get(position);
         holder.name.setText(pro.getProductName());
-        holder.description.setText(pro.getQuantity());
-        holder.price.setText(pro.getPrice());
+        holder.description.setText(Integer.toString(pro.getQuantity()));
+        holder.price.setText(Integer.toString(pro.getPrice()));
 
     }
 

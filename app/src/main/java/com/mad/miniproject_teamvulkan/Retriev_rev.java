@@ -3,7 +3,9 @@ package com.mad.miniproject_teamvulkan;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +33,14 @@ public class Retriev_rev extends AppCompatActivity {
 
         editBtn = findViewById(R.id.edit_btn);
         deleteBtn = findViewById(R.id.delete_btn);
+
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Retriev_rev.this , EditActivity.class);
+                startActivity(intent);
+            }
+        });
 
         DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Review").child("rev1");
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
