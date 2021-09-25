@@ -63,7 +63,7 @@
         android:layout_height="48dp"
         android:ems="10"
         android:hint="@string/addProductQuantityhint"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productQuantityIn"
         app:layout_constraintBottom_toBottomOf="parent"

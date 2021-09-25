@@ -127,8 +127,8 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
                         if (task.isSuccessful()) {
 
                             list.remove(position);
-                            notifyItemRemoved(position);
-                            notifyItemRangeChanged(position, list.size());
+                         //   notifyItemRemoved(position);
+                          //  notifyItemRangeChanged(position, list.size());
 
                             Log.d("Delete Product", "Product has been deleted");
                             Toast.makeText(context,
