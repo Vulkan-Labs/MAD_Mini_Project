@@ -7,7 +7,7 @@
     <string name="totalProdctOrdersText">Total Product Orders</string>
     <string name="TotalSalesText">Total Sales</string>
     <string name="manageProductsBtn">Manage Products</string>
-    <string name="pharmacyNameTxt">Pharmacy</string>
+    <string name="pharmacyNameTxt">pharmacyUser</string>
     <string name="manageProductstxt">Manage Products</string>
     <string name="pharmacyDashboardtxt">Dashboard</string>
     <string name="addNewBtntxt">ADD New Product</string>
@@ -33,6 +33,6 @@
     <string name="inventoryNetNumberViewtxt">0</string>
     <string name="expectedSalesTxttxt">Expected Sales</string>
     <string name="expectedSalesTextNumtxt">0</string>
-    <string name="expectedProfitTexttxt">Expected Net Profit</string>
+    <string name="expectedProfitTexttxt">Expected Net Profit Rs</string>
     <string name="expectedNetProfitTextNumber">0</string>
 </resources>

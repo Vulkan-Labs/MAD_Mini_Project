@@ -8,11 +8,12 @@
 
     <TextView
         android:id="@+id/pharmacyNameText"
-        android:layout_width="79dp"
-        android:layout_height="0dp"
+        android:layout_width="96dp"
+        android:layout_height="36dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="28dp"
         android:text="@string/pharmacyNameTxt"
+        android:textColor="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,9 +21,10 @@
         android:id="@+id/pharmacyPictureView"
         android:layout_width="103dp"
         android:layout_height="105dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pharmacyNameText"
         app:layout_constraintTop_toTopOf="@+id/pharmacyNameText"
         tools:srcCompat="@tools:sample/avatars" />
