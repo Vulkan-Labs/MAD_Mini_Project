@@ -27,81 +27,16 @@
         app:layout_constraintTop_toTopOf="@+id/pharmacyNameText"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/totalOrdersText"
-        android:layout_width="75dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="272dp"
-        android:text="@string/totalOrders"
-        android:textSize="34sp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/totalSalesTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/TotalSalesText"
-        app:layout_constraintBottom_toTopOf="@+id/totalSalesText"
-        app:layout_constraintStart_toEndOf="@+id/totalProductOrdersText" />
-
-    <TextView
-        android:id="@+id/totalSalesForDayText"
-        android:layout_width="72dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="148dp"
-        android:text="@string/totalSalesForDay"
-        android:textSize="34sp"
-        app:layout_constraintStart_toEndOf="@+id/totalOrdersForDayText"
-        app:layout_constraintTop_toTopOf="@+id/totalOrdersForDayText" />
-
-    <TextView
-        android:id="@+id/totalOrdersForDayText"
-        android:layout_width="75dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="228dp"
-        android:text="@string/totalOrdersForDay"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/totalProductOrdersText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/totalProdctOrdersText"
-        app:layout_constraintBottom_toTopOf="@+id/totalOrdersText"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/totalSalesText"
-        android:layout_width="72dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="148dp"
-        android:text="@string/totalSales"
-        android:textSize="34sp"
-        app:layout_constraintStart_toEndOf="@+id/totalOrdersText"
-        app:layout_constraintTop_toTopOf="@+id/totalOrdersText" />
-
     <Button
         android:id="@+id/manageProductsBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="108dp"
         android:text="@string/manageProductsBtn"
-        app:layout_constraintEnd_toEndOf="@+id/totalSalesForDayText"
-        app:layout_constraintHorizontal_bias="0.554"
-        app:layout_constraintStart_toStartOf="@+id/totalOrdersForDayText"
-        app:layout_constraintTop_toBottomOf="@+id/totalSalesForDayText" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.502" />
 
     <TextView
         android:id="@+id/textView2"
@@ -113,5 +48,41 @@
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="399dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="386dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/inventoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/currentInventorytxt"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/inventoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/inventoryTextViewNum"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

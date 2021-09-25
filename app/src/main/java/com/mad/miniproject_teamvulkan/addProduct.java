@@ -1,5 +1,6 @@
 package com.mad.miniproject_teamvulkan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -49,7 +50,7 @@ public class addProduct extends AppCompatActivity {
 
 
 
-        Query readRef =  FirebaseDatabase.getInstance().getReference().child("Product").orderByKey().limitToLast(1);
+        Query readRef =  FirebaseDatabase.getInstance().getReference().child("Product").limitToLast(1);
 
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -135,8 +136,6 @@ public class addProduct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 try{
                     if(TextUtils.isEmpty(ADDProductNameInput.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please enter a Product Name", Toast.LENGTH_SHORT).show();
@@ -153,8 +152,8 @@ public class addProduct extends AppCompatActivity {
 
 
                         //prd.setPROID("PR000001");
-                      //  dbRef.child().setValue(prd);
-                        dbRef.push().setValue(prd);
+                       dbRef.child(prd.getPROID()).setValue(prd);
+                      //  dbRef.push().setValue(prd);
 
                         Toast.makeText(getApplicationContext(), "Product Added Successfully ", Toast.LENGTH_SHORT).show();
                         clearControls();
@@ -165,6 +164,10 @@ public class addProduct extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Invalid number", Toast.LENGTH_SHORT).show();
 
                 }
+
+                Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
+                startActivity(manProd);
+
             }
         });
 
