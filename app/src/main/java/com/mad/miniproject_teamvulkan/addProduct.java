@@ -25,9 +25,9 @@ import java.util.Queue;
 
 public class addProduct extends AppCompatActivity {
     EditText ADDProductNameInput, ADDProductBuyingPriceInput, ADDProductPriceInput, ADDProductQuantityInput, ADDProductDescriptionInput;
-    TextView viewProductID;
+
     Button addProductSaveButton;
-    DatabaseReference dbRef;
+
     Product prd;
 
     @Override

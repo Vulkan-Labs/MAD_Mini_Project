@@ -35,4 +35,8 @@
     <string name="expectedSalesTextNumtxt">0</string>
     <string name="expectedProfitTexttxt">Expected Net Profit Rs</string>
     <string name="expectedNetProfitTextNumber">0</string>
+    <string name="edditproductIDViewtxt">PR</string>
+    <string name="edditProductNtxt"></string>
+    <string name="edditProducthint">Product Name</string>
+
 </resources>

@@ -11,69 +11,107 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:text="@string/editProducttxt"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/productQuantityInput4"
-        android:layout_width="338dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="@string/productQuantityIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editewProductTXT4"
+    <TextView
+        android:id="@+id/EDITProductIDTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/edditproductIDViewtxt"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editewProductTXT4" />
 
     <EditText
-        android:id="@+id/productPriceInput4"
+        android:id="@+id/EDITProductBuyingPriceInput"
         android:layout_width="338dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="288dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:hint="@string/addProductBuyingPricehint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="@string/productBuyingPriceIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductNameInput" />
+
+    <EditText
+        android:id="@+id/EDITProductPriceInput"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/addProductPricehint"
+        android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productPriceIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductBuyingPriceInput" />
+
+    <EditText
+        android:id="@+id/EDITProductQuantityInput"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/addProductQuantityhint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/productQuantityIn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/productQuantityInput4"
-        app:layout_constraintTop_toBottomOf="@+id/productQuantityInput4"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductPriceInput"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <Button
+        android:id="@+id/EDITProductSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/addProductSavebtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ADDProductQuantityInput"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductDescriptionInput"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/productNameInput4"
+        android:id="@+id/EDITProductDescriptionInput"
         android:layout_width="338dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="56dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="@string/productNameIn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/productPriceInput4"
-        app:layout_constraintTop_toBottomOf="@+id/productPriceInput4"
-        app:layout_constraintVertical_bias="0.012" />
+        android:gravity="start|top"
+        android:hint="@string/edditProducthint"
+        android:inputType="textMultiLine"
 
-    <Button
-        android:id="@+id/editProductSaveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/editProductSavebtn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/productNameInput4"
-        app:layout_constraintTop_toBottomOf="@+id/productNameInput4"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductQuantityInput" />
+
+    <EditText
+        android:id="@+id/EDITProductNameInput"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/edditProducthint"
+        android:inputType="textPersonName"
+        android:text="@string/edditProductNtxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductIDTxt" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
