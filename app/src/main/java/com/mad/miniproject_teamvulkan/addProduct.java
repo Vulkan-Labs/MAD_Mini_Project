@@ -174,7 +174,6 @@ public class addProduct extends AppCompatActivity {
     }
 
     private void clearControls(){
-
         ADDProductNameInput.setText("");
         ADDProductPriceInput.setText("");
         ADDProductQuantityInput.setText("");

@@ -24,4 +24,6 @@
     <string name="viewProductIDtxt" />
     <string name="inventoryTextViewNum">0</string>
     <string name="currentInventorytxt">"Total Inventory "</string>
+    <string name="editbtntxt">Edit</string>
+    <string name="deletebtntxt">Delete</string>
 </resources>
