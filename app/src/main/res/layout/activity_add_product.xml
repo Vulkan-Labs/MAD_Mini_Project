@@ -20,8 +20,8 @@
     <EditText
         android:id="@+id/ADDProductNameInput"
         android:layout_width="338dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/addProducthint"
         android:inputType="textPersonName"
@@ -33,24 +33,39 @@
         app:layout_constraintTop_toBottomOf="@+id/addNewProductTXT" />
 
     <EditText
+        android:id="@+id/ADDProductBuyingPriceInput"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/addProductBuyingPricehint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="@string/productBuyingPriceIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addNewProductTXT"
+        app:layout_constraintTop_toBottomOf="@+id/ADDProductNameInput" />
+
+    <EditText
         android:id="@+id/ADDProductPriceInput"
         android:layout_width="338dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/addProductPricehint"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productPriceIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ADDProductNameInput"
-        app:layout_constraintTop_toBottomOf="@+id/ADDProductNameInput" />
+        app:layout_constraintTop_toBottomOf="@+id/ADDProductBuyingPriceInput" />
 
     <EditText
         android:id="@+id/ADDProductQuantityInput"
         android:layout_width="338dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/addProductQuantityhint"
@@ -69,8 +84,8 @@
         android:text="@string/addProductSavebtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/ADDProductQuantityInput"
-        app:layout_constraintTop_toBottomOf="@+id/ADDProductQuantityInput"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintTop_toBottomOf="@+id/ADDProductDescriptionInput"
+        app:layout_constraintVertical_bias="0.227" />
 
     <TextView
         android:id="@+id/viewProductID"
@@ -83,4 +98,21 @@
         app:layout_constraintStart_toStartOf="@+id/ADDProductNameInput"
         app:layout_constraintTop_toBottomOf="@+id/addNewProductTXT"
         app:layout_constraintVertical_bias="0.53" />
+
+    <EditText
+        android:id="@+id/ADDProductDescriptionInput"
+        android:layout_width="338dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/addProductDescriptionhint"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/ADDProductQuantityInput"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ADDProductQuantityInput"
+        app:layout_constraintTop_toBottomOf="@+id/ADDProductQuantityInput" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

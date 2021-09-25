@@ -8,14 +8,18 @@ public class Product {
     @Exclude
     private String PROID;
     private String productName;
+    private  float bprice;
     private float price;
     private int quantity;
+    private String description;
 
     public Product() {
         this.PROID = PROID;
         this.productName = productName;
+        this.bprice = bprice;
         this.price = price;
         this.quantity = quantity;
+        this.description = description;
     }
 
 
@@ -26,6 +30,10 @@ public class Product {
     public void setProductName(String productName) {
         this.productName = productName;
     }
+
+    public float getBprice() { return bprice;   }
+
+    public void setBprice(float bprice) {  this.bprice = bprice;  }
 
     public float getPrice() {
         return price;
@@ -50,6 +58,11 @@ public class Product {
     public void setPROID(String PROID) {
         this.PROID = PROID;
     }
+
+    public String getDescription() {  return description; }
+
+    public void setDescription(String description) {  this.description = description; }
+
 
 
 }

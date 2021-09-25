@@ -38,21 +38,40 @@ public class pharmacyMain extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                int total = 0;
+                int totalInventory = 0;
+                float totalInventoryNet = 0;
+
+                float expectedSales = 0;
+
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
 
                   //  Product product = dataSnapshot.getValue(Product.class);
                    // products.add(product);
-                    int quantity =  Integer.parseInt(dataSnapshot.child("quantity").getValue().toString());
+                    int inventory =  Integer.parseInt(dataSnapshot.child("quantity").getValue().toString());
+                    totalInventory = totalInventory + inventory;
 
-                    total = total + quantity;
+                    float singleInventory = Float.parseFloat(dataSnapshot.child("bprice").getValue().toString());
+                    totalInventoryNet = totalInventoryNet + singleInventory;
 
+                    float eSales = Float.parseFloat(dataSnapshot.child("price").getValue().toString());
+                    expectedSales = expectedSales + eSales;
 
                 }
 
                 TextView inventory = findViewById(R.id.inventoryTextView);
+                inventory.setText(Integer.toString(totalInventory));
 
-                inventory.setText(Integer.toString(total));
+                TextView inventoryNet = findViewById(R.id.inventoryNetNumberView);
+                inventoryNet.setText(Float.toString(totalInventoryNet));
+
+                TextView expectedSaleT = findViewById(R.id.expectedSalesTextNum);
+                expectedSaleT.setText(Float.toString(expectedSales));
+
+                float profit = expectedSales - totalInventoryNet;
+                TextView netProfit = findViewById(R.id.expectedNetProfitTextNum);
+                netProfit.setText(Float.toString(profit));
+
+
 
             }
 

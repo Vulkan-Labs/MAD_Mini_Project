@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Queue;
 
 public class addProduct extends AppCompatActivity {
-    EditText ADDProductNameInput, ADDProductPriceInput, ADDProductQuantityInput;
+    EditText ADDProductNameInput, ADDProductBuyingPriceInput, ADDProductPriceInput, ADDProductQuantityInput, ADDProductDescriptionInput;
     TextView viewProductID;
     Button addProductSaveButton;
     DatabaseReference dbRef;
@@ -36,8 +36,11 @@ public class addProduct extends AppCompatActivity {
         setContentView(R.layout.activity_add_product);
 
         ADDProductNameInput = findViewById(R.id.ADDProductNameInput);
+        ADDProductBuyingPriceInput = findViewById(R.id.ADDProductBuyingPriceInput);
         ADDProductPriceInput = findViewById(R.id.ADDProductPriceInput);
         ADDProductQuantityInput = findViewById(R.id.ADDProductQuantityInput);
+        ADDProductDescriptionInput = findViewById(R.id.ADDProductDescriptionInput);
+
 
         addProductSaveButton = findViewById(R.id.addProductSaveButton);
 
@@ -139,17 +142,20 @@ public class addProduct extends AppCompatActivity {
                 try{
                     if(TextUtils.isEmpty(ADDProductNameInput.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please enter a Product Name", Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(ADDProductBuyingPriceInput.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Product Buying Price cannot be blank", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(ADDProductPriceInput.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please add a Price", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(ADDProductQuantityInput.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Please enter a Price", Toast.LENGTH_SHORT).show();
-                    else{
+                        Toast.makeText(getApplicationContext(), "Please enter a Quantity", Toast.LENGTH_SHORT).show();
+                     else{
 
 
                         prd.setProductName(ADDProductNameInput.getText().toString().trim());
+                        prd.setBprice(Float.parseFloat( ADDProductBuyingPriceInput.getText().toString().trim()));
                         prd.setPrice(Float.parseFloat(ADDProductPriceInput.getText().toString().trim()));
                         prd.setQuantity(Integer.parseInt(ADDProductQuantityInput.getText().toString().trim()));
-
+                        prd.setDescription(ADDProductDescriptionInput.getText().toString());
 
                         //prd.setPROID("PR000001");
                        dbRef.child(prd.getPROID()).setValue(prd);

@@ -26,4 +26,13 @@
     <string name="currentInventorytxt">"Total Inventory "</string>
     <string name="editbtntxt">Edit</string>
     <string name="deletebtntxt">Delete</string>
+    <string name="productBuyingPriceIn" />
+    <string name="addProductBuyingPricehint">Bying Price</string>
+    <string name="addProductDescriptionhint">Description</string>
+    <string name="inventoryNetTextViewtxt">Inventory Net Rs</string>
+    <string name="inventoryNetNumberViewtxt">0</string>
+    <string name="expectedSalesTxttxt">Expected Sales</string>
+    <string name="expectedSalesTextNumtxt">0</string>
+    <string name="expectedProfitTexttxt">Expected Net Profit</string>
+    <string name="expectedNetProfitTextNumber">0</string>
 </resources>

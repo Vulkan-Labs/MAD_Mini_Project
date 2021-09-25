@@ -48,7 +48,32 @@
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Price Rs : "
+               android:text="Buying Price Rs : "
+               android:textColor="@color/dark_blue"
+               android:textSize="26sp"
+               android:textStyle="bold"/>
+
+           <TextView
+               android:id="@+id/productBuyingPriceView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8dp"
+               android:text="0"
+               android:textColor="@color/light_blue"
+               android:textSize="20sp" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Selling Price Rs : "
                android:textColor="@color/dark_blue"
                android:textSize="26sp"
                android:textStyle="bold"/>
@@ -58,7 +83,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginLeft="8dp"
-               android:text="123"
+               android:text="0"
                android:textColor="@color/light_blue"
                android:textSize="20sp" />
 
@@ -84,9 +109,39 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginLeft="8dp"
-               android:text="18"
+               android:text="0"
                android:textColor="@color/light_blue"
                android:textSize="20sp" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Description : "
+               android:textColor="@color/dark_blue"
+               android:textSize="26sp"
+               android:textStyle="bold"/>
+
+
+
+               <TextView
+                   android:id="@+id/productDescriptionView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="8dp"
+                   android:textColor="@color/light_blue"
+                   android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. "
+                   android:textSize="20sp"/>
+
+
+
 
        </LinearLayout>
 

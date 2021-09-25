@@ -40,9 +40,10 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
 
         Product product = list.get(position);
         holder.productName.setText(product.getProductName());
+        holder.productBuyingPrice.setText(Float.toString(product.getBprice()));
         holder.productPrice.setText(Float.toString(product.getPrice()));
         holder.productQuantity.setText(Integer.toString(product.getQuantity()));
-
+        holder.productDescription.setText(product.getDescription());
     }
 
     @Override
@@ -53,7 +54,7 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
 
     public static class pharmacyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView productName, productPrice, productQuantity;
+        TextView productName, productBuyingPrice, productPrice, productQuantity, productDescription;
 
 
         public pharmacyViewHolder(@NonNull View itemView) {
@@ -61,9 +62,13 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
 
             productName = itemView.findViewById(R.id.productNameView);
 
+            productBuyingPrice = itemView.findViewById(R.id.productBuyingPriceView);
+
             productPrice = itemView.findViewById(R.id.productPriceView);
 
             productQuantity = itemView.findViewById(R.id.productQuantityView);
+
+            productDescription = itemView.findViewById(R.id.productDescriptionView);
 
 
         }
