@@ -2,6 +2,7 @@ package com.mad.miniproject_teamvulkan;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -40,7 +41,7 @@ public class Review_adapter extends RecyclerView.Adapter<Review_adapter.MyReview
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyReviewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyReviewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         reviews rev = list_R.get(position);
         holder.name.setText(rev.getName());

@@ -153,6 +153,9 @@ public class Review_view extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(), "Data Successfully added", Toast.LENGTH_SHORT).show();
                         clearControls();
+
+                        Intent allrev = new Intent(Review_view.this , Retriev_rev.class);
+                        startActivity(allrev);
                     }
                 } catch (NumberFormatException e) {
                     Toast.makeText(getApplicationContext(), "Invalid Number", Toast.LENGTH_SHORT).show();
