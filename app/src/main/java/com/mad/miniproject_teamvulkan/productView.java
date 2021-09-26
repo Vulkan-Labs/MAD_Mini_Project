@@ -19,6 +19,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.nex3z.notificationbadge.NotificationBadge;
 
 import java.util.ArrayList;
 
@@ -31,6 +32,7 @@ public class productView extends AppCompatActivity {
     DatabaseReference dbref;
     MyAdapter myAdapter;
     ArrayList<products> list;
+    NotificationBadge notificationBadge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class productView extends AppCompatActivity {
         dbref= FirebaseDatabase.getInstance().getReference().child("Product");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        notificationBadge.findViewById(R.id.notification);
 
         list = new ArrayList<>();
 
