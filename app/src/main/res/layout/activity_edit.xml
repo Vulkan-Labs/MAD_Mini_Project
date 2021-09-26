@@ -59,14 +59,6 @@
             android:inputType="textMultiLine"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-        <RatingBar
-            android:id="@+id/up_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="100dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
@@ -76,6 +68,14 @@
             android:textStyle="bold"
             android:textSize="27dp"
             android:text="Update Review" />
+
+        <TextView
+            android:id="@+id/revId_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="180dp"
+             />
 
 
     </androidx.cardview.widget.CardView>

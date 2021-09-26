@@ -1,5 +1,9 @@
 package com.mad.miniproject_teamvulkan;
 
+//import static com.mad.miniproject_teamvulkan.Review_adapter.EXTRA_MESSAGE;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,7 +25,7 @@ import java.util.Locale;
 
 public class EditActivity extends AppCompatActivity {
 
-    EditText up_name , up_comment;
+    EditText revId , up_name , up_comment;
     Button save_btn , cancel_btn;
     DatabaseReference dbref;
     reviews rev;
@@ -31,6 +36,7 @@ public class EditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
+
         up_name = findViewById(R.id.up_name);
         up_comment = findViewById(R.id.up_comment);
 
@@ -39,8 +45,17 @@ public class EditActivity extends AppCompatActivity {
 
         rev = new reviews();
 
+        Intent intent = getIntent();
+        String prid = intent.getStringExtra(EXTRA_MESSAGE);
 
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Review").child("rev1");
+
+        TextView txtMessage = findViewById(R.id.revId_view);
+
+        txtMessage.setText(prid);
+
+
+
+        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Review").child(prid);
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -62,22 +77,26 @@ public class EditActivity extends AppCompatActivity {
         save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EditActivity.this, Retriev_rev.class);
-                startActivity(intent);
+//                Intent intent = new Intent(EditActivity.this, Retriev_rev.class);
+//                startActivity(intent);
 
                 DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("Review");
                 updRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(snapshot.hasChild("rev1")){
+                        if(snapshot.hasChild(prid)){
                             try {
+                                rev.setRevID(prid);
                                 rev.setName(up_name.getText().toString().trim());
                                 rev.setComment(up_comment.getText().toString().trim());
 
-                                dbref = FirebaseDatabase.getInstance().getReference().child("Review").child("rev1");
+                                dbref = FirebaseDatabase.getInstance().getReference().child("Review").child(prid);
                                 dbref.setValue(rev);
 
                                 Toast.makeText(getApplicationContext(), "Data Update Successful", Toast.LENGTH_SHORT).show();
+
+                                startActivity(new Intent(EditActivity.this , Retriev_rev.class));
+                                finish();
                             }
                             catch (NumberFormatException e) {
                                 Toast.makeText(getApplicationContext(), "Invalid Number", Toast.LENGTH_SHORT).show();

@@ -2,6 +2,8 @@ package com.mad.miniproject_teamvulkan;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,11 +18,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class Retriev_rev extends AppCompatActivity {
 
     TextView viewName, viewComment;
     Button editBtn , deleteBtn;
+    RecyclerView recyclerView;
     DatabaseReference dbref;
+    Review_adapter review_adapter;
+    ArrayList<reviews> list_R;
 
 
     @Override
@@ -28,30 +35,31 @@ public class Retriev_rev extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retriev_rev);
 
-        viewName = findViewById(R.id.view_name);
-        viewComment = findViewById(R.id.view_comment);
+//        viewName = findViewById(R.id.view_name);
+//        viewComment = findViewById(R.id.view_comment);
 
         editBtn = findViewById(R.id.edit_btn);
         deleteBtn = findViewById(R.id.delete_btn);
 
-        editBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Retriev_rev.this , EditActivity.class);
-                startActivity(intent);
-            }
-        });
+        recyclerView = findViewById(R.id.Review_recycleview);
+        dbref = FirebaseDatabase.getInstance().getReference().child("Review");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Review").child("rev1");
-        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        list_R = new ArrayList<>();
+
+        review_adapter = new Review_adapter(this , list_R);
+        recyclerView.setAdapter(review_adapter);
+
+        dbref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.hasChildren()) {
-                    viewName.setText(snapshot.child("name").getValue().toString());
-                    viewComment.setText(snapshot.child("comment").getValue().toString());
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                    reviews rev = dataSnapshot.getValue(reviews.class);
+                    list_R.add(rev);
                 }
-                else
-                    Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
+                review_adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -59,6 +67,32 @@ public class Retriev_rev extends AppCompatActivity {
 
             }
         });
+
+//        editBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Retriev_rev.this , EditActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+//        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Review").child("rev1");
+//        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if(snapshot.hasChildren()) {
+//                    viewName.setText(snapshot.child("name").getValue().toString());
+//                    viewComment.setText(snapshot.child("comment").getValue().toString());
+//                }
+//                else
+//                    Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
 
 
     }
