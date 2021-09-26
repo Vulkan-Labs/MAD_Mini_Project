@@ -10,6 +10,16 @@ public class UserDetails {
     public UserDetails() {
     }
 
+    public UserDetails(String fullName, String phoneNo, String emailAddress, String accountType) {
+        this.fullName = fullName;
+        this.phoneNo = phoneNo;
+        this.emailAddress = emailAddress;
+        this.accountType = accountType;
+    }
+
+
+
+
     public String getFullName() {
         return fullName;
     }
