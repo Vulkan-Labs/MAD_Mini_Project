@@ -1,5 +1,17 @@
 <resources>
+
     <string name="app_name">MediRx</string>
+    <string name="entry">Enter</string>
+    <string name="all_text">All Products</string>
+    <string name="review_text">Review Product</string>
+    <string name="submit_btn">Submit</string>
+    <string name="all_views">All Reviews</string>
+    <string name="comment_hint">Add a Comment</string>
+    <string name="name_hint">Add Your Name</string>
+    <string name="item_name">Name</string>
+    <string name="item_comment">Comment</string>
+    <string name="cart_button_add">Add To Cart</string>
+    
 
     <string name="heading_add_card">Add Card</string>
     <string name="input_name_on_card">Name on Card</string>
