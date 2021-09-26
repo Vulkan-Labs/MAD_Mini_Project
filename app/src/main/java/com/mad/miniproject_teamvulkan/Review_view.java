@@ -1,5 +1,7 @@
 package com.mad.miniproject_teamvulkan;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Review_view extends AppCompatActivity {
 
     EditText textname, textcomment;
-    TextView reviewId;
+    TextView reviewId ;
     Button btn_submit;
     DatabaseReference dbref;
     reviews rev;
@@ -44,9 +46,16 @@ public class Review_view extends AppCompatActivity {
         reviewId = findViewById(R.id.review_id);
 
         btn_submit = findViewById(R.id.submit_btn_rev);
-        show_all = findViewById(R.id.all_show);
+//        show_all = findViewById(R.id.all_show);
 
         rev = new reviews();
+
+        Intent intent = getIntent();
+        String proName = intent.getStringExtra(EXTRA_MESSAGE);
+
+        TextView txtMessage = findViewById(R.id.Review_pro_name);
+
+        txtMessage.setText(proName);
 
 
         //new try
@@ -80,7 +89,7 @@ public class Review_view extends AppCompatActivity {
 
 //                         txtMessage.setText(Integer.toString(nextID));
 
-                        txtMessage.setText("PRODUCT ID " + final_revID);
+                        txtMessage.setText("Review ID " + final_revID);
 //                        reviewId.setText(final_revID);
                         rev.setRevID(final_revID);
 
@@ -106,7 +115,7 @@ public class Review_view extends AppCompatActivity {
 
                     // txtMessage.setText(Integer.toString(nextID));
 
-                   txtMessage.setText("PRODUCT ID " + final_revID);
+                   txtMessage.setText("Review ID " + final_revID);
 //                    reviewId.setText(final_revID);
                     rev.setRevID(final_revID);
 
@@ -122,13 +131,13 @@ public class Review_view extends AppCompatActivity {
 
 
 
-        show_all.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Review_view.this, Retriev_rev.class);
-                startActivity(intent);
-            }
-        });
+//        show_all.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Review_view.this, Retriev_rev.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
@@ -145,6 +154,7 @@ public class Review_view extends AppCompatActivity {
 
 
                     else {
+                        rev.setProName(proName);
                         rev.setName(textname.getText().toString().trim());
                         rev.setComment(textcomment.getText().toString());
 

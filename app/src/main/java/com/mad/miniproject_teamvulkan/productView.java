@@ -67,14 +67,14 @@ public class productView extends AppCompatActivity {
 
 
 
-        move=findViewById(R.id.review_btn);
-        move.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(productView.this,Review_view.class);
-                startActivity(intent);
-            }
-        });
+//        move=findViewById(R.id.review_btn);
+//        move.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(productView.this,Review_view.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }

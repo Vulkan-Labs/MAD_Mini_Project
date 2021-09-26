@@ -4,12 +4,26 @@ public class reviews {
 
     private String name , revID;
     private String comment;
+    private String proName;
 
-
-    public reviews(String name, String revID, String comment) {
+    public reviews(String name, String revID, String comment, String proName) {
         this.name = name;
         this.revID = revID;
         this.comment = comment;
+        this.proName = proName;
+    }
+//    public reviews(String name, String revID, String comment) {
+//        this.name = name;
+//        this.revID = revID;
+//        this.comment = comment;
+//    }
+
+    public String getProName() {
+        return proName;
+    }
+
+    public void setProName(String proName) {
+        this.proName = proName;
     }
 
     public String getRevID() {

@@ -18,9 +18,6 @@
             android:name=".Retriev_rev"
             android:exported="true" />
         <activity
-            android:name=".product_description"
-            android:exported="true" />
-        <activity
             android:name=".Main_cart"
             android:exported="true" />
         <activity
