@@ -113,7 +113,7 @@ public class editCard extends AppCompatActivity {
                                     pay.setExpDate(expDateInput.getText().toString().trim());
                                     pay.setCvv(Integer.parseInt(cvvInput.getText().toString().trim()));
                                     pay.setBillingAddress(billingAddressInput.getText().toString());
-                                    pay.setBillingAddress(nicknameInput.getText().toString());
+                                    pay.setNickname(nicknameInput.getText().toString());
 
                                     DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("payment").child(cdid);
                                     dbRef.setValue(pay);

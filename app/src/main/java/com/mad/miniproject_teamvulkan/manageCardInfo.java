@@ -56,8 +56,7 @@ public class manageCardInfo extends RecyclerView.Adapter<manageCardInfo.cardInfo
         holder.nickname.setText(card_view.getNickname());
         holder.cardNumber.setText(Float.toString(card_view.getCardNumber()));
         holder.expDate.setText(card_view.getExpDate());
-        //holder.productQuantity.setText(Integer.toString(card_view.getQuantity()));
-        //holder.productDescription.setText(card_view.getDescription());
+
 
         holder.edit.setOnClickListener(new View.OnClickListener() {
 
@@ -67,12 +66,11 @@ public class manageCardInfo extends RecyclerView.Adapter<manageCardInfo.cardInfo
 
                 Intent editCard = new Intent(context.getApplicationContext(), editCard.class);
                 editCard.putExtra(EXTRA_MESSAGE, crdid);
-                //   editProd.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                //  editProd.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                 ((viewWallet)context).finish();
                 context.startActivity(editCard);
 
-                //  this.finish();
+
 
             }
 
@@ -130,9 +128,7 @@ public class manageCardInfo extends RecyclerView.Adapter<manageCardInfo.cardInfo
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            //list.remove(position);
-                            //   notifyItemRemoved(position);
-                            //  notifyItemRangeChanged(position, list.size());
+
 
 
 

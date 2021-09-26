@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan">
         <activity
-            android:name=".addCard"
+            android:name=".viewWallet"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
