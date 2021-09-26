@@ -50,7 +50,7 @@ public class editCard extends AppCompatActivity {
 
         txtMessage.setText(cdid);
 
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Product").child(cdid);
+        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("payment").child(cdid);
 
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -115,7 +115,7 @@ public class editCard extends AppCompatActivity {
                                     pay.setBillingAddress(billingAddressInput.getText().toString());
                                     pay.setBillingAddress(nicknameInput.getText().toString());
 
-                                    DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("Product").child(cdid);
+                                    DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("payment").child(cdid);
                                     dbRef.setValue(pay);
 
                                     Toast.makeText(getApplicationContext(), "Product Edited Successfully ", Toast.LENGTH_SHORT).show();
