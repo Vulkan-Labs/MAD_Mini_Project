@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                             if(accTypeString.equals("Pharmacy")){
                                                 Toast.makeText(LoginActivity.this, "Logged In Successfully!",Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(LoginActivity.this, manageProducts.class));
+                                                startActivity(new Intent(LoginActivity.this, pharmacyMain.class));
                                                 finish();
                                             }else if(accTypeString.equals("Customer")){
                                                 Toast.makeText(LoginActivity.this, "Logged In Successfully!",Toast.LENGTH_SHORT).show();
