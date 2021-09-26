@@ -43,9 +43,11 @@
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productBuyingPriceIn"
-       
+
+        app:layout_constraintEnd_toEndOf="@+id/ADDProductNameInput"
         app:layout_constraintHorizontal_bias="0.0"
-      
+        app:layout_constraintStart_toStartOf="@+id/ADDProductNameInput"
+
         app:layout_constraintTop_toBottomOf="@+id/ADDProductNameInput" />
 
     <EditText
@@ -58,9 +60,11 @@
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productPriceIn"
-       
+
+        app:layout_constraintEnd_toEndOf="@+id/ADDProductBuyingPriceInput"
         app:layout_constraintHorizontal_bias="0.0"
-      
+        app:layout_constraintStart_toStartOf="@+id/ADDProductBuyingPriceInput"
+
         app:layout_constraintTop_toBottomOf="@+id/ADDProductBuyingPriceInput" />
 
     <EditText
@@ -73,7 +77,7 @@
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productQuantityIn"
-     
+        app:layout_constraintEnd_toEndOf="@+id/ADDProductPriceInput"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ADDProductPriceInput"
         app:layout_constraintTop_toBottomOf="@+id/ADDProductPriceInput" />
@@ -83,10 +87,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_save_24"
         android:text="@string/addProductSavebtn"
         app:layout_constraintBottom_toBottomOf="parent"
-       
-   
+        app:layout_constraintStart_toStartOf="@+id/ADDProductDescriptionInput"
         app:layout_constraintTop_toBottomOf="@+id/ADDProductDescriptionInput"
         app:layout_constraintVertical_bias="0.227" />
 
