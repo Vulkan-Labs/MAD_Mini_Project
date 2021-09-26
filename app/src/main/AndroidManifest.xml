@@ -1,23 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mad.miniproject_teamvulkan">
+    package="com.mad.miniproject_teamvulkan" >
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/medirx_app_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/medirx_app_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan">
+        android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan" >
         <activity
-            android:name=".MainActivity"
+            android:name=".editProduct"
+            android:exported="true" />
+        <activity
+            android:name=".addProduct"
+            android:exported="true" />
+        <activity
+            android:name=".manageProducts"
+            android:exported="true" />
+        <activity
+            android:name=".pharmacyMain"
+            android:exported="true" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ManageCategoriesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditCategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddCategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".viewWallet"
+            android:exported="true" />
+        <activity
+            android:name=".addCard"
+            android:exported="true"/>
+        <activity
+            android:name=".editCard"
+            android:exported="true"/>
+        <activity
+            android:name=".productView"
+            android:exported="true"/>
+        <activity
+            android:name=".EditActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Retriev_rev"
+            android:exported="true" />
+        <activity
+            android:name=".Main_cart"
+            android:exported="true" />
+        <activity
+            android:name=".Review_view"
+            android:exported="true" />
+
+        <activity android:name=".MainActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

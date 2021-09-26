@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editProduct">
+
+    <TextView
+        android:id="@+id/editewProductTXT4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/editProducttxt"
+        android:textColor="@color/dark_blue"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/EDITProductIDTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/edditproductIDViewtxt"
+        android:textColor="@color/purple_500"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editewProductTXT4" />
+
+    <EditText
+        android:id="@+id/EDITProductNameInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/edditProducthint"
+        android:inputType="textPersonName"
+        android:text="@string/edditProductNtxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductIDTxt" />
+
+    <EditText
+        android:id="@+id/EDITProductBuyingPriceInput"
+        android:layout_width="328dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/addProductBuyingPricehint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="@string/productBuyingPriceIn"
+        app:layout_constraintEnd_toEndOf="@+id/EDITProductNameInput"
+        app:layout_constraintStart_toStartOf="@+id/EDITProductNameInput"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductNameInput" />
+
+    <EditText
+        android:id="@+id/EDITProductPriceInput"
+        android:layout_width="329dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/addProductPricehint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="@string/productPriceIn"
+        app:layout_constraintEnd_toEndOf="@+id/EDITProductBuyingPriceInput"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="@+id/EDITProductBuyingPriceInput"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductBuyingPriceInput" />
+
+    <EditText
+        android:id="@+id/EDITProductQuantityInput"
+        android:layout_width="329dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/addProductQuantityhint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="@string/productQuantityIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/EDITProductPriceInput"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="@+id/EDITProductPriceInput"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductPriceInput"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/EDITProductSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="292dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:text="@string/addProductSavebtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:drawableLeft="@drawable/ic_baseline_save_24"
+        app:layout_constraintStart_toStartOf="@+id/EDITProductDescriptionInput"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductDescriptionInput"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <EditText
+        android:id="@+id/EDITProductDescriptionInput"
+        android:layout_width="330dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/edditProducthint"
+        android:inputType="textMultiLine"
+
+        app:layout_constraintEnd_toEndOf="@+id/EDITProductQuantityInput"
+        app:layout_constraintStart_toStartOf="@+id/EDITProductQuantityInput"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductQuantityInput" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

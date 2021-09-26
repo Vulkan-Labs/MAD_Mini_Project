@@ -3,6 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_add_product.xml" value="0.4" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_edit_product.xml" value="0.264" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_layout.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_main.xml" value="0.17889492753623187" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_main_cart.xml" value="0.264" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_manage_products.xml" value="0.152" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_pharmacy_main.xml" value="0.4" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_pharmacy_recycle_view.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_product_view.xml" value="0.176" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_reset_password.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_tobe_main.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/card_edit.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/layout.xml" value="0.2" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/pharmacy_recycle_view.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/product.xml" value="0.264" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/products.xml" value="0.259375" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/menu/option_menu.xml" value="0.259375" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_all_reviews.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_edit.xml" value="0.4" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_main_cart.xml" value="0.2520833333333333" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_product_description.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_product_view.xml" value="0.5131440588853838" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_retriev_rev.xml" value="0.3511627906976744" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_retrieve_rev.xml" value="0.25" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/activity_review_view.xml" value="0.264" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/fragment_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/item.xml" value="0.4" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/product_cards.xml" value="0.536" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/product_list.xml" value="0.264" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/rev_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/E T E C H/AndroidStudioProjects/MAD_Mini_Project/app/src/main/res/layout/review_cards.xml" value="0.264" />
         <entry key="..\:/Users/tivai/AndroidStudioProjects/MAD_Mini_Project_Team_Vulkan/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
