@@ -3,11 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_add_product.xml" value="0.264" />
-        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_edit_product.xml" value="0.264" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_add_product.xml" value="0.6" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_edit_product.xml" value="0.5808270676691729" />
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_main.xml" value="0.17889492753623187" />
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_manage_products.xml" value="0.259375" />
-        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_pharmacy_main.xml" value="0.264" />
+        <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_pharmacy_main.xml" value="0.536" />
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/activity_pharmacy_recycle_view.xml" value="0.259375" />
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/pharmacy_recycle_view.xml" value="0.259375" />
         <entry key="..\:/GitHub/MAD_Mini_Project/app/src/main/res/layout/product.xml" value="0.4" />

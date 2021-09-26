@@ -76,8 +76,6 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
 
             }
 
-
-
         });
 
 
@@ -92,11 +90,12 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
 
     }
 
+    //----------------------------------------View Holder--------------------------------------------------//
+
     @Override
     public int getItemCount() {
         return list.size();
     }
-
 
     public static class pharmacyViewHolder extends RecyclerView.ViewHolder{
 
@@ -126,7 +125,7 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
     }
 
 
-
+    //------------------------------------Delete Product Function-------------------------------------------------------//
     private void deleteProduct(String proid,  int position) {
         FirebaseDatabase.getInstance().getReference()
                 .child("Product").child(proid).removeValue()
@@ -146,9 +145,9 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
                                     Toast.LENGTH_SHORT).show();
 
                             Intent manProd = new Intent(context.getApplicationContext(), manageProducts.class);
-                            ((manageProducts)context).finish();
-                            context.startActivity(manProd);
 
+                            context.startActivity(manProd);
+                            ((manageProducts)context).finish();
 
 
                         } else {

@@ -29,14 +29,14 @@
                android:textSize="20sp"
                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/productNameView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="prodcut"
-            android:textColor="@color/light_blue"
-            android:textSize="20sp" />
+           <TextView
+               android:id="@+id/productNameView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8dp"
+               android:text="prodcut"
+               android:textColor="@color/medium_blue"
+               android:textSize="20sp" />
        </LinearLayout>
 
        <LinearLayout
@@ -59,7 +59,7 @@
                android:layout_height="wrap_content"
                android:layout_marginLeft="8dp"
                android:text="0"
-               android:textColor="@color/light_blue"
+               android:textColor="@color/medium_blue"
                android:textSize="20sp" />
 
        </LinearLayout>
@@ -84,7 +84,7 @@
                android:layout_height="wrap_content"
                android:layout_marginLeft="8dp"
                android:text="0"
-               android:textColor="@color/light_blue"
+               android:textColor="@color/medium_blue"
                android:textSize="20sp" />
 
        </LinearLayout>
@@ -110,7 +110,7 @@
                android:layout_height="wrap_content"
                android:layout_marginLeft="8dp"
                android:text="0"
-               android:textColor="@color/light_blue"
+               android:textColor="@color/medium_blue"
                android:textSize="20sp" />
 
        </LinearLayout>
@@ -130,15 +130,14 @@
                android:textStyle="bold" />
 
 
-
-               <TextView
-                   android:id="@+id/productDescriptionView"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginLeft="8dp"
-                   android:textColor="@color/light_blue"
-                   android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. "
-                   android:textSize="20sp"/>
+           <TextView
+               android:id="@+id/productDescriptionView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8dp"
+               android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. "
+               android:textColor="@color/medium_blue"
+               android:textSize="20sp" />
 
 
 
@@ -155,7 +154,8 @@
             android:id="@+id/editbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/editbtntxt" />
+            android:text="@string/editbtntxt"
+            android:drawableLeft="@drawable/ic_baseline_edit_attributes_24"/>
 
         <Button
             android:id="@+id/deletebtn"
@@ -163,7 +163,8 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_weight="2"
-            android:backgroundTint="@android:color/holo_red_light"
+            android:drawableLeft="@drawable/ic_baseline_delete_sweep_24"
+            android:backgroundTint="@android:color/holo_red_dark"
             android:text="@string/deletebtntxt" />
 
     </LinearLayout>

@@ -65,6 +65,7 @@ public class manageProducts extends AppCompatActivity {
             }
         });
 
+//-------------------------------------Add New Product Activity Button-------------------------//
 
         Button button1 = findViewById(R.id.addNewButton);
         button1.setOnClickListener(new View.OnClickListener() {

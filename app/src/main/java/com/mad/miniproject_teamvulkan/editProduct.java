@@ -51,6 +51,8 @@ public class editProduct extends AppCompatActivity {
 
         DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Product").child(prid);
 
+        //------------------------------Fetch and display data of specific product--------------------------------------//
+
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -63,11 +65,7 @@ public class editProduct extends AppCompatActivity {
                 quantity.setText(snapshot.child("quantity").getValue().toString());
                 desc.setText(snapshot.child("description").getValue().toString());
 
-
-
                 }
-
-
             }
 
             @Override
@@ -75,6 +73,8 @@ public class editProduct extends AppCompatActivity {
 
             }
         });
+
+        //------------------------------Save edited data to specific product-----------------------------------------//
 
         dbEditRef = FirebaseDatabase.getInstance().getReference().child("Product");
 
@@ -88,8 +88,6 @@ public class editProduct extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.hasChild(prid)){
-
-
                             try{
                                 if(TextUtils.isEmpty(ProductName.getText().toString()))
                                     Toast.makeText(getApplicationContext(), "Please enter a Product Name", Toast.LENGTH_SHORT).show();
@@ -134,24 +132,8 @@ public class editProduct extends AppCompatActivity {
                     }
                 });
 
-
-
-
-
-
-
-
-
-
-
-
             }
         });
-
-
-
-
-
 
     }
 }

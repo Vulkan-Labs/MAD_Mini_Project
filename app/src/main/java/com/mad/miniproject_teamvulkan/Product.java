@@ -4,7 +4,6 @@ import com.google.firebase.database.Exclude;
 
 public class Product {
 
-
     @Exclude
     private String PROID;
     private String productName;
@@ -62,7 +61,5 @@ public class Product {
     public String getDescription() {  return description; }
 
     public void setDescription(String description) {  this.description = description;   }
-
-
 
 }

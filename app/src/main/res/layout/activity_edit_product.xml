@@ -10,9 +10,10 @@
         android:id="@+id/editewProductTXT4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/editProducttxt"
+        android:textColor="@color/dark_blue"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,9 +22,10 @@
         android:id="@+id/EDITProductIDTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="@string/edditproductIDViewtxt"
+        android:textColor="@color/purple_500"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editewProductTXT4" />
@@ -32,13 +34,14 @@
         android:id="@+id/EDITProductBuyingPriceInput"
         android:layout_width="338dp"
         android:layout_height="48dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/addProductBuyingPricehint"
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productBuyingPriceIn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EDITProductNameInput" />
 
@@ -46,14 +49,14 @@
         android:id="@+id/EDITProductPriceInput"
         android:layout_width="338dp"
         android:layout_height="48dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/addProductPricehint"
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productPriceIn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EDITProductBuyingPriceInput" />
 
@@ -61,6 +64,7 @@
         android:id="@+id/EDITProductQuantityInput"
         android:layout_width="338dp"
         android:layout_height="48dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/addProductQuantityhint"
         android:inputType="number"
@@ -68,23 +72,26 @@
         android:text="@string/productQuantityIn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EDITProductPriceInput"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/EDITProductSaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="304dp"
+        android:layout_marginEnd="292dp"
         android:layout_marginBottom="28dp"
+        android:backgroundTint="?attr/colorAccent"
         android:text="@string/addProductSavebtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/ADDProductQuantityInput"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:drawableLeft="@drawable/ic_baseline_save_24"
+        app:layout_constraintStart_toStartOf="@+id/EDITProductDescriptionInput"
         app:layout_constraintTop_toBottomOf="@+id/EDITProductDescriptionInput"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <EditText
         android:id="@+id/EDITProductDescriptionInput"
@@ -105,7 +112,7 @@
         android:layout_width="328dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/edditProducthint"
         android:inputType="textPersonName"

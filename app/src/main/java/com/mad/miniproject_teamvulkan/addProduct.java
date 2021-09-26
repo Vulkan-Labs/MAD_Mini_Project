@@ -49,9 +49,8 @@ public class addProduct extends AppCompatActivity {
         prd = new Product();
 
        dbRef = FirebaseDatabase.getInstance().getReference().child("Product");
-       // List<QueryDocumentSnapshot> documents = future.get().getDocuments
 
-
+//----------------------------------------------ID Generator-----------------------------------------------------//
 
         Query readRef =  FirebaseDatabase.getInstance().getReference().child("Product").limitToLast(1);
 
@@ -133,6 +132,8 @@ public class addProduct extends AppCompatActivity {
             }
         });
 
+       //-----------------------------------------Save Product to database--------------------------------------------------------//
+
         Button button1 = findViewById(R.id.addProductSaveButton);
         button1.setOnClickListener(new View.OnClickListener() {
 
@@ -157,9 +158,7 @@ public class addProduct extends AppCompatActivity {
                         prd.setQuantity(Integer.parseInt(ADDProductQuantityInput.getText().toString().trim()));
                         prd.setDescription(ADDProductDescriptionInput.getText().toString());
 
-                        //prd.setPROID("PR000001");
                        dbRef.child(prd.getPROID()).setValue(prd);
-                      //  dbRef.push().setValue(prd);
 
                         Toast.makeText(getApplicationContext(), "Product Added Successfully ", Toast.LENGTH_SHORT).show();
                         clearControls();

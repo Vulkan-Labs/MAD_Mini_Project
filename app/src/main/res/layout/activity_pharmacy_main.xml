@@ -37,6 +37,7 @@
         android:text="@string/manageProductsBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:drawableLeft="@drawable/ic_baseline_settings_applications_24"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.348" />
 
@@ -72,6 +73,7 @@
             android:layout_marginTop="7dp"
             android:text="@string/currentInventorytxt"
             android:textColor="@color/dark_blue"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -80,8 +82,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
-            android:textColor="@color/light_blue"
             android:text="@string/inventoryTextViewNum"
+            android:textColor="@color/medium_blue"
             android:textSize="34sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -90,10 +92,11 @@
             android:id="@+id/inventoryNetTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
+            android:layout_marginLeft="230dp"
             android:layout_marginTop="7dp"
+            android:text="@string/inventoryNetTextViewtxt"
             android:textColor="@color/dark_blue"
-            android:text="@string/inventoryNetTextViewtxt" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/inventoryNetNumberView"
@@ -101,8 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="30dp"
-            android:textColor="@color/light_blue"
             android:text="@string/inventoryNetNumberViewtxt"
+            android:textColor="@color/medium_blue"
             android:textSize="34sp" />
 
     </androidx.cardview.widget.CardView>
@@ -124,8 +127,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="18dp"
             android:layout_marginTop="7dp"
+            android:text="@string/expectedSalesTxttxt"
             android:textColor="@color/dark_blue"
-            android:text="@string/expectedSalesTxttxt" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/expectedSalesTextNum"
@@ -133,20 +137,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
-            android:textColor="@color/light_blue"
-
             android:text="@string/expectedSalesTextNumtxt"
+
+            android:textColor="@color/medium_blue"
             android:textSize="34sp"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/expectedProfitText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
+            android:layout_width="160dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="230dp"
             android:layout_marginTop="7dp"
+            android:text="@string/expectedProfitTexttxt"
             android:textColor="@color/dark_blue"
-            android:text="@string/expectedProfitTexttxt" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/expectedNetProfitTextNum"
@@ -154,8 +159,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="260dp"
             android:layout_marginTop="30dp"
-            android:textColor="@color/light_blue"
             android:text="@string/expectedNetProfitTextNumber"
+            android:textColor="@color/medium_blue"
             android:textSize="34sp" />
     </androidx.cardview.widget.CardView>
 

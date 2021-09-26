@@ -36,6 +36,7 @@ public class pharmacyMain extends AppCompatActivity {
 
         readRef.addValueEventListener(new ValueEventListener() {
 
+      //------------------------DASHBOARD CALCULATIONS ---------------------------------------------------//
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int totalInventory = 0;
@@ -45,8 +46,6 @@ public class pharmacyMain extends AppCompatActivity {
 
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
 
-                  //  Product product = dataSnapshot.getValue(Product.class);
-                   // products.add(product);
                     int inventory =  Integer.parseInt(dataSnapshot.child("quantity").getValue().toString());
                     totalInventory = totalInventory + inventory;
 
@@ -57,6 +56,8 @@ public class pharmacyMain extends AppCompatActivity {
                     expectedSales = expectedSales + eSales;
 
                 }
+
+            //------------------------DASHBOARD CALCULATIONS DISPLAY---------------------------------------------------//
 
                 TextView inventory = findViewById(R.id.inventoryTextView);
                 inventory.setText(Integer.toString(totalInventory));
@@ -71,8 +72,6 @@ public class pharmacyMain extends AppCompatActivity {
                 TextView netProfit = findViewById(R.id.expectedNetProfitTextNum);
                 netProfit.setText(Float.toString(profit));
 
-
-
             }
 
             @Override
@@ -80,10 +79,6 @@ public class pharmacyMain extends AppCompatActivity {
 
             }
         });
-
-
-
-
 
         Button button1 = findViewById(R.id.manageProductsBTN);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -94,9 +89,6 @@ public class pharmacyMain extends AppCompatActivity {
 
             }
         });
-
-
-
 
     }
 }
