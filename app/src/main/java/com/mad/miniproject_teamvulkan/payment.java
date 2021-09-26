@@ -10,6 +10,9 @@ public class payment {
     private String expDate;
     private int cvv;
     private String billingAddress;
+    private String cardId;
+
+
 
     public payment() {
 
@@ -54,5 +57,13 @@ public class payment {
 
     public void setBillingAddress(String billingAddress) {
         this.billingAddress = billingAddress;
+    }
+
+    public String getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
     }
 }

@@ -23,7 +23,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class addCard extends  appCompatActivity {
+public class addCard extends AppCompatActivity {
 
     EditText cardholderNameInput, cardNumberInput, expDateInput, cvvInput, billingAddressInput;
     Button btnAddCardConfirm;
@@ -93,7 +93,7 @@ public class addCard extends  appCompatActivity {
 
                         txtMessage.setText("PRODUCT ID " + finalID);
 
-                        pay.setCARDID(finalID);
+                        pay.setCardId(finalID);
 
                     }
 
@@ -123,7 +123,7 @@ public class addCard extends  appCompatActivity {
 
                     txtMessage.setText("PRODUCT ID " + finalID);
 
-                    pay.setCARDID(finalID);
+                    pay.setCardId(finalID);
 
                 }
 
@@ -135,7 +135,7 @@ public class addCard extends  appCompatActivity {
             }
         });
 
-        Button button1 = findViewById(R.id.addProductSaveButton);
+        Button button1 = findViewById(R.id.btnAddCardConfirm);
         button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -161,9 +161,9 @@ public class addCard extends  appCompatActivity {
                         pay.setCvv(Integer.parseInt(cvvInput.getText().toString().trim()));
                         pay.setBillingAddress(billingAddressInput.getText().toString());
 
-                        //pay.setCARDID("CC000001");
-                        dbRef.child(pay.getCARDID()).setValue(pay);
-                        //dbRef.push().setValue(pay);
+
+                        dbRef.child(pay.getCardId()).setValue(pay);
+
 
                         Toast.makeText(getApplicationContext(), "Payment Method added Successfully ", Toast.LENGTH_SHORT).show();
                         clearControls();
@@ -175,10 +175,7 @@ public class addCard extends  appCompatActivity {
                     Toast.makeText(getApplicationContext(), "Invalid Details", Toast.LENGTH_SHORT).show();
 
                 }
-                //Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
-                //manProd.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                //startActivity(manProd);
-                //finish();
+
 
             }
         });

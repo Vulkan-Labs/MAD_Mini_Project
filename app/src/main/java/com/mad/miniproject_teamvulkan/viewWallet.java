@@ -25,9 +25,9 @@ import java.util.Queue;
 
 public class viewWallet {
 
-    EditText ;
-    Button ;
-    DatabaseReference dbRef;
-    payment pay;
+    //EditText ;
+   // Button ;
+   // DatabaseReference dbRef;
+   // payment pay;
 
 }

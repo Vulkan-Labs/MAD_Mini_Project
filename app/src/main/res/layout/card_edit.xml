@@ -43,7 +43,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/addCardTxt"
+            android:id="@+id/editCardTxt"
             android:layout_width="165dp"
             android:layout_height="59dp"
             android:layout_marginStart="25dp"

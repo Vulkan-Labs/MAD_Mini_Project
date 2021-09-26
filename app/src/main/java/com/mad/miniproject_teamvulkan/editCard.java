@@ -25,8 +25,8 @@ import java.util.Queue;
 
 public class editCard {
 
-    EditText ;
-    Button ;
-    DatabaseReference dbRef;
-    payment pay;
+    //EditText ;
+    //Button ;
+    //DatabaseReference dbRef;
+    //payment pay;
 }

@@ -25,9 +25,9 @@ import java.util.Queue;
 
 public class viewCard {
 
-    EditText ;
-    Button ;
-    DatabaseReference dbRef;
-    payment pay;
+    //EditText ;
+   // Button ;
+    //DatabaseReference dbRef;
+    //payment pay;
 
 }
