@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Mini_ProjectTeam_Vulkan">
         <activity
+            android:name=".addCard"
+            android:exported="true"/>
+        <activity
+            android:name=".editCard"
+            android:exported="true"/>
+        <activity
             android:name=".viewWallet"
             android:exported="true">
             <intent-filter>
@@ -18,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
