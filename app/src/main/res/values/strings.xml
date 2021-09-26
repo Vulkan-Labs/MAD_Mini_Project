@@ -133,5 +133,6 @@
     <string name="btn_dlt_category">Delete</string>
     <string name="txt_category_no_txtView">Category [No.]</string>
     <string name="txt_category_desc_txtView">[Category Description]</string>
-    <string name="manageCategoriesBtntxt">"Manage Categories "</string>>
+    <string name="manageCategoriesBtntxt">"Manage Categories "</string>
+    <string name="walletbtntxt">Wallet</string>>
 </resources>

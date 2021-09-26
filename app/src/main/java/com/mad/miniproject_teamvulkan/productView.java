@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -49,6 +51,23 @@ public class productView extends AppCompatActivity{
         myAdapter = new MyAdapter(this , list );
         recyclerView.setAdapter(myAdapter);
 
+
+        Button button1 = findViewById(R.id.walletbtn);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(productView.this ,viewWallet.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
+
+
+
         dbref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -59,6 +78,9 @@ public class productView extends AppCompatActivity{
                 }
                 myAdapter.notifyDataSetChanged();
             }
+
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

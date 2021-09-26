@@ -175,7 +175,7 @@ public class addCard extends AppCompatActivity {
                         clearControls();
                     }
                     Intent viewW = new Intent(getApplicationContext(), viewWallet.class);
-
+                    finish();
                     startActivity(viewW);
 
                 } catch (NumberFormatException e) {

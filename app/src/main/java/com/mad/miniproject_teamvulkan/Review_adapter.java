@@ -50,7 +50,7 @@ public class Review_adapter extends RecyclerView.Adapter<Review_adapter.MyReview
                 String revID = rev.getRevID();
                 Intent intent = new Intent(context.getApplicationContext(), EditActivity.class);
                 intent.putExtra(EXTRA_MESSAGE, revID);
-                ((Retriev_rev)context).finish();
+
                 context.startActivity(intent);
             }
         });

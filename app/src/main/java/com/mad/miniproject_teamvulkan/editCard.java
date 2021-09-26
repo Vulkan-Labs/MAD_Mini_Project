@@ -129,7 +129,7 @@ public class editCard extends AppCompatActivity {
                             }
 
                             Intent viewW = new Intent(getApplicationContext(), viewWallet.class);
-
+                            finish();
                             startActivity(viewW);
 
                         }
@@ -141,24 +141,8 @@ public class editCard extends AppCompatActivity {
                     }
                 });
 
-
-
-
-
-
-
-
-
-
-
-
             }
         });
-
-
-
-
-
 
     }
 }

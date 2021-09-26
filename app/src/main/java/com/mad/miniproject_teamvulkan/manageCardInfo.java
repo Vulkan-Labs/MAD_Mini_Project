@@ -67,7 +67,7 @@ public class manageCardInfo extends RecyclerView.Adapter<manageCardInfo.cardInfo
                 Intent editCard = new Intent(context.getApplicationContext(), editCard.class);
                 editCard.putExtra(EXTRA_MESSAGE, crdid);
 
-                ((viewWallet)context).finish();
+              //  ((viewWallet)context).finish();
                 context.startActivity(editCard);
 
 
@@ -138,7 +138,7 @@ public class manageCardInfo extends RecyclerView.Adapter<manageCardInfo.cardInfo
                                     Toast.LENGTH_SHORT).show();
 
                             Intent viewW = new Intent(context.getApplicationContext(), viewWallet.class);
-
+                            ((viewWallet)context).finish();
                             context.startActivity(viewW);
 
 
