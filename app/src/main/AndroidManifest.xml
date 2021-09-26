@@ -37,7 +37,7 @@
             android:name=".SignUpActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".viewWallet"
             android:exported="true" />
         <activity
             android:name=".addCard"
@@ -45,8 +45,10 @@
         <activity
             android:name=".editCard"
             android:exported="true"/>
+        <activity android:name=".LoginActivity"
+            android:exported="true"/>
         <activity
-            android:name=".viewWallet"
+            android:name=".MainActivity"
             android:exported="true">
 
             <intent-filter>

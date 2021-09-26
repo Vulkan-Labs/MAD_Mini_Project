@@ -90,5 +90,14 @@ public class pharmacyMain extends AppCompatActivity {
             }
         });
 
+        Button button2 = findViewById(R.id.manageCategoriesBtn);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent manCat = new Intent(getApplicationContext(), ManageCategoriesActivity.class);
+                startActivity(manCat);
+            }
+        });
+
     }
 }
