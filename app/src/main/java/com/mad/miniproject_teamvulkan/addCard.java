@@ -65,7 +65,7 @@ public class addCard extends AppCompatActivity {
 
                     for(DataSnapshot ds: datasnapshot.getChildren()){
 
-                        String ID = ds.child("cardid").getValue().toString();
+                        String ID = ds.child("cardId").getValue().toString();
 
                         if(ID == ""){
 
