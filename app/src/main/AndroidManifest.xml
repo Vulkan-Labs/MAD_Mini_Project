@@ -45,10 +45,16 @@
         <activity
             android:name=".editCard"
             android:exported="true"/>
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".productView"
+            android:exported="true"/>
+        
+
+
+        <activity android:name=".MainActivity"
             android:exported="true"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
 
             <intent-filter>

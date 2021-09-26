@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 finish();
                                             }else if(accTypeString.equals("Customer")){
                                                 Toast.makeText(LoginActivity.this, "Logged In Successfully!",Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(LoginActivity.this, AddCategoryActivity.class));
+                                                startActivity(new Intent(LoginActivity.this, productView.class));
                                                 finish();
                                             }
                                         }
