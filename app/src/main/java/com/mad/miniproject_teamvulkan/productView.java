@@ -34,7 +34,6 @@ public class productView extends AppCompatActivity{
     ArrayList<products> list;
     NotificationBadge notificationBadge;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,13 +44,10 @@ public class productView extends AppCompatActivity{
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        notificationBadge.findViewById(R.id.notification);
-
         list = new ArrayList<>();
 
         myAdapter = new MyAdapter(this , list );
         recyclerView.setAdapter(myAdapter);
-
 
         dbref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -70,17 +66,6 @@ public class productView extends AppCompatActivity{
                         Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-//        move=findViewById(R.id.review_btn);
-//        move.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(productView.this,Review_view.class);
-//                startActivity(intent);
-//            }
-//        });
 
     }
 

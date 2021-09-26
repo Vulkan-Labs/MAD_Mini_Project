@@ -36,10 +36,8 @@ public class EditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
-
         up_name = findViewById(R.id.up_name);
         up_comment = findViewById(R.id.up_comment);
-
         save_btn = findViewById(R.id.save_update_btn);
         cancel_btn = findViewById(R.id.cancel_update_btn);
 
@@ -48,12 +46,8 @@ public class EditActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String prid = intent.getStringExtra(EXTRA_MESSAGE);
 
-
         TextView txtMessage = findViewById(R.id.revId_view);
-
         txtMessage.setText(prid);
-
-
 
         DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Review").child(prid);
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -77,15 +71,11 @@ public class EditActivity extends AppCompatActivity {
         save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(EditActivity.this, Retriev_rev.class);
-//                startActivity(intent);
-
                 DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("Review");
                 updRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.hasChild(prid)){
-                            try {
                                 rev.setRevID(prid);
                                 rev.setName(up_name.getText().toString().trim());
                                 rev.setComment(up_comment.getText().toString().trim());
@@ -97,10 +87,7 @@ public class EditActivity extends AppCompatActivity {
 
                                 startActivity(new Intent(EditActivity.this , Retriev_rev.class));
                                 finish();
-                            }
-                            catch (NumberFormatException e) {
-                                Toast.makeText(getApplicationContext(), "Invalid Number", Toast.LENGTH_SHORT).show();
-                            }
+
                         }
                         else
                             Toast.makeText(getApplicationContext(), "No Source to display", Toast.LENGTH_SHORT).show();

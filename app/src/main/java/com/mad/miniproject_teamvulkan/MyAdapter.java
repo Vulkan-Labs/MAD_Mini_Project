@@ -17,7 +17,6 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-//    private static final String TAG = "test.sliit.recyclerview.RecyclerViewAdapter";
     Context context;
     ArrayList<products> list;
 
@@ -59,7 +58,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public int getItemCount() {
         return list.size();
     }
-
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 

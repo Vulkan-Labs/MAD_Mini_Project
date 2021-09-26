@@ -34,13 +34,9 @@ public class Retriev_rev extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retriev_rev);
-
-//        viewName = findViewById(R.id.view_name);
-//        viewComment = findViewById(R.id.view_comment);
-
+        //Buttons
         editBtn = findViewById(R.id.edit_btn);
         deleteBtn = findViewById(R.id.delete_btn);
-
         goto_prod =findViewById(R.id.btn_goto_products);
 
         recyclerView = findViewById(R.id.Review_recycleview);
@@ -48,11 +44,12 @@ public class Retriev_rev extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list_R = new ArrayList<>();
+        list_R = new ArrayList<>(); //Array list initialize
 
         review_adapter = new Review_adapter(this , list_R);
         recyclerView.setAdapter(review_adapter);
 
+        //retrieving data from firebase
         dbref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
