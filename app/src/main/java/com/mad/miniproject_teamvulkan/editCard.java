@@ -109,9 +109,9 @@ public class editCard extends AppCompatActivity {
 
                                     pay.setCardId(cdid);
                                     pay.setCardholderName(cardholderNameInput.getText().toString().trim());
-                                    pay.setCardNumber(Integer.parseInt(cardNumberInput.getText().toString().trim()));
+                                    pay.setCardNumber(cardNumberInput.getText().toString().trim());
                                     pay.setExpDate(expDateInput.getText().toString().trim());
-                                    pay.setCvv(Integer.parseInt(cvvInput.getText().toString().trim()));
+                                    pay.setCvv(cvvInput.getText().toString().trim());
                                     pay.setBillingAddress(billingAddressInput.getText().toString());
                                     pay.setNickname(nicknameInput.getText().toString());
 

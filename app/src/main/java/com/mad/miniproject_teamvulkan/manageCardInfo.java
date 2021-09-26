@@ -54,7 +54,7 @@ public class manageCardInfo extends RecyclerView.Adapter<manageCardInfo.cardInfo
 
         payment card_view = list.get(position);
         holder.nickname.setText(card_view.getNickname());
-        holder.cardNumber.setText(Float.toString(card_view.getCardNumber()));
+        holder.cardNumber.setText(card_view.getCardNumber());
         holder.expDate.setText(card_view.getExpDate());
 
 

@@ -6,9 +6,9 @@ public class payment {
 
     @Exclude
     private String cardholderName;
-    private int cardNumber;
+    private String cardNumber;
     private String expDate;
-    private int cvv;
+    private String cvv;
     private String billingAddress;
     private String cardId;
     private String nickname;
@@ -29,11 +29,11 @@ public class payment {
         this.cardholderName = cardholderName;
     }
 
-    public int getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(int cardNumber) {
+    public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
@@ -45,11 +45,11 @@ public class payment {
         this.expDate = expDate;
     }
 
-    public int getCvv() {
+    public String getCvv() {
         return cvv;
     }
 
-    public void setCvv(int cvv) {
+    public void setCvv(String cvv) {
         this.cvv = cvv;
     }
 
