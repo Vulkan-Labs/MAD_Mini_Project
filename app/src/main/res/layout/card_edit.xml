@@ -6,9 +6,12 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-29dp">
 
         <EditText
             android:id="@+id/editTextTextPersonName5"
@@ -17,7 +20,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:ems="10"
-            android:hint="@string/input_Cvv"
+            android:hint="@string/input_cvv"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -32,22 +35,12 @@
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
-            android:hint="@string/input_name_on_card"
+            android:hint="@string/input_NameOnCard"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btn_editcard_save"
-            android:layout_width="385dp"
-            android:layout_height="49dp"
-            android:background="@color/dark_blue"
-            android:backgroundTint="@color/dark_blue"
-            android:text="@string/btn_edit_card_save"
-            tools:layout_editor_absoluteX="13dp"
-            tools:layout_editor_absoluteY="628dp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -59,7 +52,7 @@
             android:ems="10"
             android:fontFamily="sans-serif"
             android:inputType="textPersonName"
-            android:text="@string/txt_visa"
+            android:text="@string/heading_cardNickName"
             android:textAlignment="center"
             android:textColor="@color/dark_blue"
             android:textSize="34sp"
@@ -75,7 +68,7 @@
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
-            android:hint="@string/input_card_no"
+            android:hint="@string/input_edit_card_no"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/editTextDate"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,11 +82,9 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="25dp"
-            android:layout_marginBottom="106dp"
             android:ems="10"
-            android:hint="@string/input_Billing_address"
+            android:hint="@string/input_billing_address"
             android:inputType="textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/btn_editcard_save"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +98,7 @@
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
-            android:hint="@string/input_exp_Date"
+            android:hint="@string/input_exp_date"
             android:inputType="date"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
             app:layout_constraintEnd_toEndOf="parent"
@@ -121,6 +112,27 @@
             app:srcCompat="@drawable/abc_vector_test"
             tools:layout_editor_absoluteX="11dp"
             tools:layout_editor_absoluteY="5dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heading_edit_card"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="17dp" />
+
+        <Button
+            android:id="@+id/btn_editcard_save"
+            android:layout_width="385dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="@string/btn_edit_card_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -137,16 +149,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="413dp" />
-
-    <Button
-        android:id="@+id/btn_editcard_save"
-        android:layout_width="385dp"
-        android:layout_height="49dp"
-        android:background="@color/dark_blue"
-        android:backgroundTint="@color/dark_blue"
-        android:text="@string/btn_edit_card_save"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="627dp" />
 
     <ImageButton
         android:id="@+id/imageButton2"
