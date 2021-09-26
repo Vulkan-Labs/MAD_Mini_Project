@@ -29,6 +29,19 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editewProductTXT4" />
+    <EditText
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:id="@+id/EDITProductNameInput"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/edditProducthint"
+        android:inputType="textPersonName"
+        android:text="@string/edditProductNtxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITProductIDTxt" />
 
     <EditText
         android:id="@+id/EDITProductBuyingPriceInput"
@@ -107,18 +120,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EDITProductQuantityInput" />
 
-    <EditText
-        android:id="@+id/EDITProductNameInput"
-        android:layout_width="328dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/edditProducthint"
-        android:inputType="textPersonName"
-        android:text="@string/edditProductNtxt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EDITProductIDTxt" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,13 +33,13 @@
         android:id="@+id/manageProductsBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
+        android:drawableLeft="@drawable/ic_baseline_settings_applications_24"
         android:text="@string/manageProductsBtn"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:drawableLeft="@drawable/ic_baseline_settings_applications_24"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.329" />
 
     <TextView
         android:id="@+id/textView2"
@@ -48,9 +48,9 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="50dp"
         android:text="@string/pharmacyDashboardtxt"
+        android:textColor="@color/dark_blue"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/dark_blue"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView

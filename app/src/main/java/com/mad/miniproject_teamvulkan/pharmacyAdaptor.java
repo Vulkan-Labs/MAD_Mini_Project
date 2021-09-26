@@ -53,6 +53,7 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
     public void onBindViewHolder(@NonNull pharmacyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Product product = list.get(position);
+        holder.PRID.setText(product.getPROID());
         holder.productName.setText(product.getProductName());
         holder.productBuyingPrice.setText(Float.toString(product.getBprice()));
         holder.productPrice.setText(Float.toString(product.getPrice()));
@@ -99,7 +100,7 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
 
     public static class pharmacyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView productName, productBuyingPrice, productPrice, productQuantity, productDescription;
+        TextView PRID, productName, productBuyingPrice, productPrice, productQuantity, productDescription;
         public Button delete , edit;
 
         public pharmacyViewHolder(@NonNull View itemView) {
@@ -108,6 +109,8 @@ public class pharmacyAdaptor extends RecyclerView.Adapter<pharmacyAdaptor.pharma
 
             delete = itemView.findViewById(R.id.deletebtn);
             edit = itemView.findViewById(R.id.editbtn);
+
+            PRID = itemView.findViewById(R.id.productIDView);
 
             productName = itemView.findViewById(R.id.productNameView);
 
