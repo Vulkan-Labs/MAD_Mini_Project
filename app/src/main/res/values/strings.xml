@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MAD_Mini_Project - Team_Vulkan</string>
+    <string name="app_name">MediRx</string>
     <string name="totalOrders">0</string>
     <string name="totalSales">0</string>
     <string name="totalOrdersForDay">0</string>
@@ -39,4 +39,37 @@
     <string name="edditProductNtxt"></string>
     <string name="edditProducthint">Product Name</string>
 
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_sign_up">SIGN UP</string>
+    <string name="txt_forgot_pw">FORGOT PASSWORD</string>
+    <string name="inputBox_email">Email</string>
+    <string name="inputBox_password">Password</string>
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="inputBox_full_name">Full Name</string>
+    <string name="inputBox_phone_no">Phone Number</string>
+    <string name="radio_btn_customer">Customer</string>
+    <string name="radio_btn_pharmacy">Pharmacy</string>
+    <string name="txt_acc_type">Choose Account Type :</string>
+    <string name="txt_add_category">Add Category</string>
+    <string name="inputBox_category_name">Category Name</string>
+    <string name="inputBox_category_id">Category ID</string>
+    <string name="inputBox_category_description">Description</string>
+    <string name="btn_done">DONE</string>
+    <string name="txt_edit_category">Edit Category</string>
+    <string name="txt_manage_categories">Manage Categories</string>
+    <string name="txt_reset_password">RESET PASSWORD</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="txt_reset_pw_info">Enter your email below to receive instructions to reset password.</string>
+    <string name="btn_edt_category">Edit</string>
+    <string name="btn_dlt_category">Delete</string>
+    <string name="txt_category_no_txtView">Category [No.]</string>
+    <string name="txt_category_desc_txtView">[Category Description]</string>>
 </resources>
