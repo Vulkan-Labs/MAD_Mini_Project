@@ -44,8 +44,9 @@ public class Review_adapter extends RecyclerView.Adapter<Review_adapter.MyReview
     public void onBindViewHolder(@NonNull MyReviewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         reviews rev = list_R.get(position);
-        holder.name.setText(rev.getName());
+        holder.name.setText(rev.getProName());
         holder.comment.setText(rev.getComment());
+        holder.cusName.setText(rev.getName());
 
         holder.updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +94,7 @@ public class Review_adapter extends RecyclerView.Adapter<Review_adapter.MyReview
 
     public static class MyReviewHolder extends RecyclerView.ViewHolder{
 
-        TextView name , comment;
+        TextView name , comment, cusName;
         Button updateBtn , deletebtn;
 
         public MyReviewHolder(@NonNull View itemView) {
@@ -101,6 +102,8 @@ public class Review_adapter extends RecyclerView.Adapter<Review_adapter.MyReview
 
             name = itemView.findViewById(R.id.view_name);
             comment = itemView.findViewById(R.id.view_comment);
+            cusName = itemView.findViewById(R.id.view_cus_name);
+
 
             updateBtn = itemView.findViewById(R.id.edit_btn);
             deletebtn = itemView.findViewById(R.id.delete_btn);

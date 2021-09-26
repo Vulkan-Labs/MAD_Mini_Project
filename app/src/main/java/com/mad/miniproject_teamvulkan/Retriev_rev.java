@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class Retriev_rev extends AppCompatActivity {
 
     TextView viewName, viewComment;
-    Button editBtn , deleteBtn;
+    Button editBtn , deleteBtn , goto_prod;
     RecyclerView recyclerView;
     DatabaseReference dbref;
     Review_adapter review_adapter;
@@ -40,6 +40,8 @@ public class Retriev_rev extends AppCompatActivity {
 
         editBtn = findViewById(R.id.edit_btn);
         deleteBtn = findViewById(R.id.delete_btn);
+
+        goto_prod =findViewById(R.id.btn_goto_products);
 
         recyclerView = findViewById(R.id.Review_recycleview);
         dbref = FirebaseDatabase.getInstance().getReference().child("Review");
@@ -65,6 +67,14 @@ public class Retriev_rev extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        goto_prod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Retriev_rev.this , productView.class);
+                startActivity(intent);
             }
         });
 

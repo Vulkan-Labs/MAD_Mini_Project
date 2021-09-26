@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="90dp"
+    android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
     app:cardCornerRadius="16dp"
@@ -16,17 +16,18 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_margin="10dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
+
                 android:background="#FFFFFF"
-                android:textStyle="bold"
+                android:text="Product Name : "
                 android:textSize="18dp"
-                android:text="Name : " />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/view_name"
@@ -41,16 +42,32 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="18dp"
-                android:text="Comment : " />
+                android:id="@+id/view_cus_name"
+                android:textSize="19dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:text="Comment : "-->
+<!--                android:textSize="18dp" />-->
 
             <TextView
                 android:id="@+id/view_comment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="240dp"
+                android:layout_height="40sp" />
+
         </LinearLayout>
 
 
@@ -58,22 +75,24 @@
 
     <Button
         android:id="@+id/edit_btn"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="298dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#4CAF50"
         android:text="Edit"
         tools:ignore="DuplicateClickableBoundsCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/delete_btn"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="298dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="90dp"
         android:backgroundTint="#E83131"
         android:text="Delete"
         tools:ignore="TouchTargetSizeCheck" />
+
 
 
 </androidx.cardview.widget.CardView>
