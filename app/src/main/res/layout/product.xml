@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:backgroundTint="@color/cardBackground"
+    android:backgroundTint="@color/white"
     app:cardCornerRadius="3dp"
     app:cardElevation="3dp">
 
@@ -177,7 +177,7 @@
                 android:id="@+id/editbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_edit_attributes_24"
+                android:drawableLeft="@android:drawable/ic_menu_edit"
                 android:text="@string/editbtntxt" />
 
             <Button

@@ -41,7 +41,6 @@ public class pharmacyMain extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int totalInventory = 0;
                 float totalInventoryNet = 0;
-
                 float expectedSales = 0;
 
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
@@ -49,15 +48,16 @@ public class pharmacyMain extends AppCompatActivity {
                     int inventory =  Integer.parseInt(dataSnapshot.child("quantity").getValue().toString());
                     totalInventory = totalInventory + inventory;
 
-                    float singleInventory = Float.parseFloat(dataSnapshot.child("bprice").getValue().toString());
+                    float singleInventory = Float.parseFloat(dataSnapshot.child("inventoryNet").getValue().toString());
                     totalInventoryNet = totalInventoryNet + singleInventory;
 
-                    float eSales = Float.parseFloat(dataSnapshot.child("price").getValue().toString());
+                    float eSales = Float.parseFloat(dataSnapshot.child("exptSales").getValue().toString());
                     expectedSales = expectedSales + eSales;
 
                 }
 
             //------------------------DASHBOARD CALCULATIONS DISPLAY---------------------------------------------------//
+
 
                 TextView inventory = findViewById(R.id.inventoryTextView);
                 inventory.setText(Integer.toString(totalInventory));

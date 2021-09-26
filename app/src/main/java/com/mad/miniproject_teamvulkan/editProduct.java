@@ -90,13 +90,13 @@ public class editProduct extends AppCompatActivity {
                         if(snapshot.hasChild(prid)){
                             try{
                                 if(TextUtils.isEmpty(ProductName.getText().toString()))
-                                    Toast.makeText(getApplicationContext(), "Please enter a Product Name", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Product Name cannot be empty", Toast.LENGTH_SHORT).show();
                                 else if(TextUtils.isEmpty(bprice.getText().toString()))
-                                    Toast.makeText(getApplicationContext(), "Product Buying Price cannot be blank", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Product Buying Price cannot be empty", Toast.LENGTH_SHORT).show();
                                 else if (TextUtils.isEmpty(price.getText().toString()))
-                                    Toast.makeText(getApplicationContext(), "Please add a Price", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Price cannot be empty", Toast.LENGTH_SHORT).show();
                                 else if (TextUtils.isEmpty(quantity.getText().toString()))
-                                    Toast.makeText(getApplicationContext(), "Please enter a Quantity", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
                                 else{
 
                                     prd.setPROID(prid);
@@ -106,23 +106,26 @@ public class editProduct extends AppCompatActivity {
                                     prd.setQuantity(Integer.parseInt(quantity.getText().toString().trim()));
                                     prd.setDescription(desc.getText().toString());
 
+                                    //--------------------------Calculations for Quantity and Sales per product------------//
+                                    prd.setInventoryNet(prd.getBprice() * prd.getQuantity());
+                                    prd.setExptSales(prd.getPrice() * prd.getQuantity());
+
                                     DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("Product").child(prid);
                                     dbRef.setValue(prd);
 
                                     Toast.makeText(getApplicationContext(), "Product Eddited Successfully ", Toast.LENGTH_SHORT).show();
 
+                                    Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
+                                    finish();
+                                    startActivity(manProd);
+
                                 }
 
+
+
                             }catch (NumberFormatException e){
-
                                 Toast.makeText(getApplicationContext(), "Invalid number", Toast.LENGTH_SHORT).show();
-
                             }
-
-                            Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
-                            finish();
-                            startActivity(manProd);
-
                         }
                     }
 

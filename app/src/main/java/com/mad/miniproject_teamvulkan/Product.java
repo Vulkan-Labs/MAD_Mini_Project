@@ -12,6 +12,15 @@ public class Product {
     private int quantity;
     private String description;
 
+
+
+    private float inventoryNet;
+
+
+
+    private  float exptSales;
+
+
     public Product() {
         this.PROID = PROID;
         this.productName = productName;
@@ -19,6 +28,9 @@ public class Product {
         this.price = price;
         this.quantity = quantity;
         this.description = description;
+
+        this.inventoryNet = inventoryNet;
+        this.exptSales = exptSales;
     }
 
 
@@ -61,5 +73,15 @@ public class Product {
     public String getDescription() {  return description; }
 
     public void setDescription(String description) {  this.description = description;   }
+
+
+
+    public float getInventoryNet() {  return inventoryNet;  }
+
+    public void setInventoryNet(float inventoryNet) {   this.inventoryNet = inventoryNet;  }
+
+    public float getExptSales() {  return exptSales; }
+
+    public void setExptSales(float exptSales) { this.exptSales = exptSales;  }
 
 }

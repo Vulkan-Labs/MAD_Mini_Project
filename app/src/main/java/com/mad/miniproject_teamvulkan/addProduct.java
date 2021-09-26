@@ -142,15 +142,14 @@ public class addProduct extends AppCompatActivity {
 
                 try{
                     if(TextUtils.isEmpty(ADDProductNameInput.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Please enter a Product Name", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Product Name cannot be empty", Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(ADDProductBuyingPriceInput.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Product Buying Price cannot be blank", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Product Buying Price cannot be empty", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(ADDProductPriceInput.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Please add a Price", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Price cannot be empty", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(ADDProductQuantityInput.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Please enter a Quantity", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
                      else{
-
 
                         prd.setProductName(ADDProductNameInput.getText().toString().trim());
                         prd.setBprice(Float.parseFloat( ADDProductBuyingPriceInput.getText().toString().trim()));
@@ -158,10 +157,20 @@ public class addProduct extends AppCompatActivity {
                         prd.setQuantity(Integer.parseInt(ADDProductQuantityInput.getText().toString().trim()));
                         prd.setDescription(ADDProductDescriptionInput.getText().toString());
 
-                       dbRef.child(prd.getPROID()).setValue(prd);
+
+                       //--------------------------Calculations for Quantity and Sales per product------------//
+                        prd.setInventoryNet(prd.getBprice() * prd.getQuantity());
+                        prd.setExptSales(prd.getPrice() * prd.getQuantity());
+
+                        dbRef.child(prd.getPROID()).setValue(prd);
 
                         Toast.makeText(getApplicationContext(), "Product Added Successfully ", Toast.LENGTH_SHORT).show();
-                        clearControls();
+
+                        Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
+                        manProd.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        startActivity(manProd);
+                        finish();
+                      //  clearControls();
                     }
 
                 }catch (NumberFormatException e){
@@ -170,20 +179,17 @@ public class addProduct extends AppCompatActivity {
 
                 }
 
-                Intent manProd = new Intent(getApplicationContext(), manageProducts.class);
-                manProd.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                startActivity(manProd);
-                finish();
+
 
             }
         });
 
     }
 
-    private void clearControls(){
+   /** private void clearControls(){
         ADDProductNameInput.setText("");
         ADDProductPriceInput.setText("");
         ADDProductQuantityInput.setText("");
-    }
+    }*/
 
 }
