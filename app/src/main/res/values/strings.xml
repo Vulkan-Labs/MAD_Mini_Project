@@ -12,6 +12,7 @@
     <string name="input_Billing_address">Billing Address</string>
     <string name="btn_confirm">Confirm</string>
     <string name="viewCardIDtxt" />
+    <string name="cardNickname">Nickname</string>
 
     <string name="heading_wallet">Wallet</string>
     <string name="txt_cardNo1">.... .... .... 5898</string>
@@ -26,7 +27,7 @@
 
     <string name="heading_cardType"></string>
     <string name="txt_cardNo"></string>
-    <string name="txt_expiry_date">Expiry Date</string>
+    <string name="txt_expiry_date"></string>
     <string name="txt_expDate"></string>
     <string name="btn_edit">Edit</string>
     <string name="btn_remove_payment_method">Remove Payment Method</string>

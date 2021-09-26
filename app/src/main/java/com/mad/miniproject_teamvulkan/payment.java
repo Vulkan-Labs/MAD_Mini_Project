@@ -11,6 +11,8 @@ public class payment {
     private int cvv;
     private String billingAddress;
     private String cardId;
+    private String nickname;
+
 
 
 
@@ -66,4 +68,14 @@ public class payment {
     public void setCardId(String cardId) {
         this.cardId = cardId;
     }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+
 }

@@ -25,7 +25,7 @@ import java.util.Queue;
 
 public class addCard extends AppCompatActivity {
 
-    EditText cardholderNameInput, cardNumberInput, expDateInput, cvvInput, billingAddressInput;
+    EditText cardholderNameInput, cardNumberInput, expDateInput, cvvInput, billingAddressInput, nicknameInput;
     Button btnAddCardConfirm;
     DatabaseReference dbRef;
     payment pay;
@@ -36,6 +36,7 @@ public class addCard extends AppCompatActivity {
         expDateInput.setText("");
         cvvInput.setText("");
         billingAddressInput.setText("");
+        nicknameInput.setText("");
     }
 
     @Override
@@ -48,6 +49,7 @@ public class addCard extends AppCompatActivity {
         expDateInput = findViewById(R.id.expDateInput);
         cvvInput = findViewById(R.id.cvvInput);
         billingAddressInput = findViewById(R.id.billingAddressInput);
+        nicknameInput = findViewById(R.id.nicknameInput);
 
         btnAddCardConfirm = findViewById(R.id.btnAddCardConfirm);
 
@@ -152,6 +154,8 @@ public class addCard extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Please enter CVV", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(billingAddressInput.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please enter Billing Address", Toast.LENGTH_LONG).show();
+                    else if (TextUtils.isEmpty(nicknameInput.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter Card Nickname", Toast.LENGTH_LONG).show();
                     else {
 
 
@@ -160,6 +164,8 @@ public class addCard extends AppCompatActivity {
                         pay.setExpDate(expDateInput.getText().toString().trim());
                         pay.setCvv(Integer.parseInt(cvvInput.getText().toString().trim()));
                         pay.setBillingAddress(billingAddressInput.getText().toString());
+                        pay.setBillingAddress(nicknameInput.getText().toString());
+
 
 
                         dbRef.child(pay.getCardId()).setValue(pay);
