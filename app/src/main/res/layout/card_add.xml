@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/cvvInput"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
@@ -21,7 +21,7 @@
         tools:layout_editor_absoluteY="413dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/cardholderNameInput"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
@@ -30,13 +30,13 @@
         android:ems="10"
         android:hint="@string/input_name_on_card"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/cardNumberInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_add_card_confirm"
+        android:id="@+id/btnAddCardConfirm"
         android:layout_width="385dp"
         android:layout_height="49dp"
         android:layout_marginStart="25dp"
@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/addCardTxt"
         android:layout_width="411dp"
         android:layout_height="64dp"
         android:layout_marginStart="22dp"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/cardNumberInput"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
@@ -76,13 +76,13 @@
         android:ems="10"
         android:hint="@string/input_card_no"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+        app:layout_constraintBottom_toTopOf="@+id/expDateInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPostalAddress"
+        android:id="@+id/billingAddressInput"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
@@ -96,10 +96,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/cvvInput" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/expDateInput"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
@@ -108,7 +108,7 @@
         android:ems="10"
         android:hint="@string/input_exp_Date"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+        app:layout_constraintBottom_toTopOf="@+id/cvvInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
@@ -120,5 +120,13 @@
         app:srcCompat="@drawable/abc_vector_test"
         tools:layout_editor_absoluteX="11dp"
         tools:layout_editor_absoluteY="5dp" />
+
+    <TextView
+        android:id="@+id/viewCardID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viewCardIDtxt"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="137dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

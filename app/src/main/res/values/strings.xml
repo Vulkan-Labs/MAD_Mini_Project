@@ -11,6 +11,7 @@
     <string name="input_Cvv">CVV</string>
     <string name="input_Billing_address">Billing Address</string>
     <string name="btn_confirm">Confirm</string>
+    <string name="viewCardIDtxt" />
 
     <string name="heading_wallet">Wallet</string>
     <string name="txt_cardNo1">.... .... .... 5898</string>
