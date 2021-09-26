@@ -70,9 +70,9 @@ public class viewWallet extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent addProd = new Intent(getApplicationContext(), addCard.class);
-                finish();
-                startActivity(addProd);
+                Intent addC = new Intent(getApplicationContext(), addCard.class);
+
+                startActivity(addC);
 
             }
         });

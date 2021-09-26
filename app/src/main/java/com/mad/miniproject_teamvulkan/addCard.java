@@ -174,7 +174,9 @@ public class addCard extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Payment Method added Successfully ", Toast.LENGTH_SHORT).show();
                         clearControls();
                     }
+                    Intent viewW = new Intent(getApplicationContext(), viewWallet.class);
 
+                    startActivity(viewW);
 
                 } catch (NumberFormatException e) {
 

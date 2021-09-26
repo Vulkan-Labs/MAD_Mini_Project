@@ -128,9 +128,9 @@ public class editCard extends AppCompatActivity {
 
                             }
 
-                            Intent manProd = new Intent(getApplicationContext(), viewWallet.class);
-                            finish();
-                            startActivity(manProd);
+                            Intent viewW = new Intent(getApplicationContext(), viewWallet.class);
+
+                            startActivity(viewW);
 
                         }
                     }

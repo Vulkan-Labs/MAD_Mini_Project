@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue"
-    android:backgroundTint="@color/light_blue">
+    android:background="@color/white"
+    android:backgroundTint="@color/white">
 
     <EditText
         android:id="@+id/walletHeadingTxt"
@@ -25,16 +25,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abc_vector_test" />
-
     <Button
         android:id="@+id/btnAddPayment"
         android:layout_width="385dp"
@@ -44,6 +34,7 @@
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/dark_blue"
         android:text="@string/btn_add_payment_method"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -57,13 +48,4 @@
         app:layout_constraintBottom_toTopOf="@+id/btnAddPayment"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="19dp"
-        android:text="Profile"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

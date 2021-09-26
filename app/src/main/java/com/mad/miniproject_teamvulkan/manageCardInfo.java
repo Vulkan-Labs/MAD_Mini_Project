@@ -137,9 +137,9 @@ public class manageCardInfo extends RecyclerView.Adapter<manageCardInfo.cardInfo
                                     "product has been deleted",
                                     Toast.LENGTH_SHORT).show();
 
-                            Intent manProd = new Intent(context.getApplicationContext(), viewWallet.class);
-                            ((viewWallet)context).finish();
-                            context.startActivity(manProd);
+                            Intent viewW = new Intent(context.getApplicationContext(), viewWallet.class);
+
+                            context.startActivity(viewW);
 
 
 

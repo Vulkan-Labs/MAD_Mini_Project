@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue"
-    android:backgroundTint="@color/light_blue"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
     <EditText
@@ -19,6 +19,7 @@
         android:ems="10"
         android:hint="@string/input_Cvv"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/billingAddressInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,6 +37,7 @@
         android:ems="10"
         android:hint="@string/input_name_on_card"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/cardNumberInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -51,6 +53,7 @@
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/dark_blue"
         android:text="@string/btn_confirm"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -66,6 +69,7 @@
         android:ems="10"
         android:hint="@string/input_card_no"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/expDateInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -83,6 +87,7 @@
         android:ems="10"
         android:hint="@string/input_Billing_address"
         android:inputType="textPostalAddress"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/nicknameInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -100,21 +105,12 @@
         android:ems="10"
         android:hint="@string/input_exp_Date"
         android:inputType="date"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/cvvInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardNumberInput" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abc_vector_test" />
 
     <TextView
         android:id="@+id/viewCardID"
@@ -123,6 +119,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="19dp"
         android:text="@string/viewCardIDtxt"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addCardTxt" />
 
@@ -148,17 +145,9 @@
         android:ems="10"
         android:hint="@string/cardNickname"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnAddCardConfirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Payment Methods"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

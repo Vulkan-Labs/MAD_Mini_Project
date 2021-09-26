@@ -9,8 +9,8 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_blue"
-        android:backgroundTint="@color/light_blue"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="48dp">
@@ -24,6 +24,7 @@
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/billingAddressInput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -40,6 +41,7 @@
             android:ems="10"
             android:hint="@string/input_NameOnCard"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/cardNumberInput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -74,6 +76,7 @@
             android:ems="10"
             android:hint="@string/input_edit_card_no"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/expDateInput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -89,6 +92,7 @@
             android:ems="10"
             android:hint="@string/input_billing_address"
             android:inputType="textPostalAddress"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,28 +108,11 @@
             android:ems="10"
             android:hint="@string/input_exp_date"
             android:inputType="date"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/cvvInput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/abc_vector_test" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/heading_edit_card"
-            tools:layout_editor_absoluteX="59dp"
-            tools:layout_editor_absoluteY="17dp" />
 
         <Button
             android:id="@+id/btnEditCardSave"
@@ -136,6 +123,7 @@
             android:layout_marginBottom="30dp"
             android:backgroundTint="@color/dark_blue"
             android:text="@string/btn_edit_card_save"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -144,8 +132,11 @@
             android:id="@+id/editCardID"
             android:layout_width="0dp"
             android:layout_height="17dp"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="189dp" />
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="189dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
