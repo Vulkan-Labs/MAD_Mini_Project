@@ -43,9 +43,11 @@
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productBuyingPriceIn"
+
         app:layout_constraintEnd_toEndOf="@+id/ADDProductNameInput"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ADDProductNameInput"
+
         app:layout_constraintTop_toBottomOf="@+id/ADDProductNameInput" />
 
     <EditText
@@ -58,9 +60,11 @@
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/productPriceIn"
+
         app:layout_constraintEnd_toEndOf="@+id/ADDProductBuyingPriceInput"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ADDProductBuyingPriceInput"
+
         app:layout_constraintTop_toBottomOf="@+id/ADDProductBuyingPriceInput" />
 
     <EditText
