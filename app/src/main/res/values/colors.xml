@@ -5,6 +5,7 @@
     <color name="medium_blue">#3FAAD7</color>
     <color name="dark_blue">#0064AF</color>
     <color name="red">#B00020</color>
+    <color name="Black">#212121</color>
     <!-- Default Colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
